@@ -65,13 +65,13 @@ extension WindyHomePageView: UITableViewDataSource, UITableViewDelegate {
             cell.billData(viewModel.getCurrentLocationWeatherData(), viewModel.getCurrentLocationForecastWeatherData())
             return cell
         }
-        
+
         let count = viewModel.getListLocationCount()
         if count == 0 {
             let cell = NoDataTableViewCell.dequeCellWithTable(tableView)
             return cell
         }
-        
+
         let cell = HomeLocationTableViewCell.dequeCellWithTable(tableView)
         let location = viewModel.getLocation(index: indexPath.row)
         let forecastData = viewModel.getLocationForecastData(index: indexPath.row)

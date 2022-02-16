@@ -14,6 +14,7 @@ class SelectLocationViewController: BaseViewController {
     @IBOutlet weak var btnCancel: UIButton!
     @IBOutlet weak var tbvMain: UITableView!
     @IBOutlet weak var lblNoResult: UILabel!
+    var locationIds: [String] = []
     private let locationDataManager = LocationDataManager()
     private var listResult: [LocationModel] = []
     fileprivate var selectLocationHandler: ((_ location: LocationModel) -> Void)?

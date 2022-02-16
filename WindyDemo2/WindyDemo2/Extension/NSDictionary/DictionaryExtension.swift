@@ -45,6 +45,10 @@ extension NSDictionary {
     }
     
     func doubleValueWithKey(_ key: String)-> Double {
+        if let value = self.value(forKey: key) as? Double {
+            return value
+        }
+        
         if let value = self.value(forKey: key) as? String {
             return Double(value) ?? 0.0
         }

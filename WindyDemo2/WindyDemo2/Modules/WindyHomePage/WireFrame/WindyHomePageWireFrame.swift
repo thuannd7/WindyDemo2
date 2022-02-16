@@ -11,9 +11,13 @@ class WindyHomePageWireFrame: NSObject
 }
 
 extension WindyHomePageWireFrame: WindyHomePageWireFrameInput {
-    func doOpenSelectLocationScreen() {
+    func doOpenSelectLocationScreen(listLocationSelected: [LocationModel]) {
+        let ids = listLocationSelected.map { (item: LocationModel) in
+            return item.id
+        }
+        
         SelectLocationViewController.doSelectLocation(from: viewController,
-                                                      selectedLocationIds: [])
+                                                      selectedLocationIds: ids)
         { [weak self] (location: LocationModel) in
             self?.presenter?.didSelectLocation(location)
         }

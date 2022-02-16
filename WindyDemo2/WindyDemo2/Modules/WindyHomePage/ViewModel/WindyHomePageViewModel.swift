@@ -11,6 +11,10 @@ class WindyHomePageViewModel: NSObject
     var listFavorite: [LocationModel] = []
     private var mapForecastWeatherData: [String: ForecastWeatherDataModel] = [:]
     private var currentLocationWeatherData: LocationWeatherDataModel?
+    
+    override init() {
+        listFavorite = DataManager.shared.getListLocationFavorite()
+    }
 }
 
 extension WindyHomePageViewModel: WindyHomePageViewModelInput {
@@ -31,6 +35,7 @@ extension WindyHomePageViewModel: WindyHomePageViewModelInput {
         
         if result.isEmpty {
             listFavorite.append(location)
+            DataManager.shared.saveListFavoriteLocation(listFavorite)
         }
     }
     
@@ -38,6 +43,7 @@ extension WindyHomePageViewModel: WindyHomePageViewModelInput {
         listFavorite.removeAll { (item: LocationModel) in
             return item.id == location.id
         }
+        DataManager.shared.saveListFavoriteLocation(listFavorite)
     }
     
     func doUpdateCurrentLocationWeatherData(data: LocationWeatherDataModel) {
@@ -81,7 +87,7 @@ extension WindyHomePageViewModel: WindyHomePageViewModelOutput {
         return mapForecastWeatherData["current"]
     }
     
-    func getWeatherData(location: LocationModel) -> LocationWeatherDataModel? {
-        return nil
+    func getFavoriteList() -> [LocationModel] {
+        return listFavorite
     }
 }

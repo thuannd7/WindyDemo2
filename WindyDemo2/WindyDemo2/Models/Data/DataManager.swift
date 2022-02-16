@@ -10,60 +10,54 @@ import SwiftyJSON
 
 class DataManager: NSObject {
     static let shared: DataManager = DataManager()
-    
     private var listAllLocation: [LocationModel] = []
-    private var mapAllLocation: [String: LocationModel] = [:]
-    private var listFavoriteLocationID: [String] = []
     
     override init() {
         super.init()
     }
     
-    func isInFavorite(_ item: LocationModel) -> Bool {
-        let result = listFavoriteLocationID.filter { (id: String) in
-            return item.id == id
+    func fetchData() {
+        let userDefault = UserDefaults.standard
+        if let JSONString = userDefault.value(forKey: "listFavoriteLocationID") as? String {
+            do {
+                let data = JSONString.data(using: String.Encoding.utf8, allowLossyConversion: false)
+
+                if let jsonData = data {
+                    let _list = try JSONSerialization.jsonObject(with: jsonData, options: []) as? Array<NSDictionary>
+                    if let list = _list {
+                        for dict in list {
+                            let item = LocationModel(dict: dict)
+                            listAllLocation.append(item)
+                        }
+                    }
+                }
+            }
+            catch {
+                DLog("fetchData failed")
+            }
         }
-        
-        return !result.isEmpty
-    }
-    
-    func doAddLocationToFavorite(_ item: LocationModel) {
-        let result = listFavoriteLocationID.filter { (id: String) in
-            return item.id == id
-        }
-        
-        if result.count == 0 {
-            listFavoriteLocationID.append(item.id)
-            saveData()
-        }
-    }
-    
-    func doRemoveLocationFromFavorite(_ item: LocationModel) {
-        listFavoriteLocationID.removeAll { (id: String) in
-            return item.id == id
-        }
-        
-        saveData()
     }
     
     func getListLocationFavorite() -> [LocationModel] {
-        var list: [LocationModel] = []
-        for id in listFavoriteLocationID {
-            if let item = mapAllLocation[id] {
-                list.append(item)
+        return listAllLocation
+    }
+    
+    func saveListFavoriteLocation(_ list: [LocationModel]) {
+        do {
+            let listData = list.map { (item: LocationModel) in
+                return item.toDict()
             }
+            
+            let jsonData = try JSONSerialization.data(withJSONObject: listData, options: JSONSerialization.WritingOptions.prettyPrinted)
+
+            //Convert back to string. Usually only do this for debugging
+            if let JSONString = String(data: jsonData, encoding: String.Encoding.utf8) {
+                let userDefault = UserDefaults.standard
+                userDefault.setValue(JSONString, forKey: "listFavoriteLocationID")
+                userDefault.synchronize()
+            }
+        } catch {
+            DLog("saveListFavoriteLocation failed")
         }
-        
-        return list
-    }
-    
-    func getLocationWithId(_ id: String) -> LocationModel? {
-        return mapAllLocation[id]
-    }
-    
-    private func saveData() {
-        let userDefault = UserDefaults.standard
-        userDefault.setValue(listFavoriteLocationID, forKey: "listFavoriteLocationID")
-        userDefault.synchronize() 
     }
 }

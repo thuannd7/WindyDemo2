@@ -22,8 +22,8 @@ class LocationModel: NSObject {
         name    = dict.stringValueWithKey("name")
         state   = dict.stringValueWithKey("state")
         country = dict.stringValueWithKey("country")
-        lat     = dict.doubleValueWithKey("coord.lat")
-        long    = dict.doubleValueWithKey("coord.lon")
+        lat     = dict.doubleValueWithKey("lat")
+        long    = dict.doubleValueWithKey("long")
         searchStr = name.searchString
     }
     
@@ -35,5 +35,16 @@ class LocationModel: NSObject {
         lat     = json["coord"]["lat"].doubleValue
         long    = json["coord"]["lon"].doubleValue
         searchStr = name.searchString
+    }
+    
+    func toDict() -> Dictionary<String, Any> {
+        return [
+            "id" : id,
+            "name": name,
+            "state": state,
+            "country": country,
+            "lat": lat,
+            "long": long
+        ]
     }
 }

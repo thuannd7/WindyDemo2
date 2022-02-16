@@ -60,9 +60,9 @@ protocol WindyHomePageViewModelOutput: NSObjectProtocol {
     func getListLocationCount() -> Int
     func getCurrentLocationWeatherData() -> LocationWeatherDataModel?
     func getCurrentLocationForecastWeatherData() -> ForecastWeatherDataModel?
-    func getWeatherData(location: LocationModel) -> LocationWeatherDataModel?
     func getLocation(index: Int) -> LocationModel?
     func getLocationForecastData(index: Int) -> ForecastWeatherDataModel?
+    func getFavoriteList() -> [LocationModel]
 }
 
 //========================= INTERACTOR =================
@@ -85,7 +85,7 @@ protocol WindyHomePageInteractorOutput: NSObjectProtocol {
 // MARK:
 // MARK: INTERACTOR
 protocol WindyHomePageWireFrameInput: NSObjectProtocol {
-    func doOpenSelectLocationScreen()
+    func doOpenSelectLocationScreen(listLocationSelected: [LocationModel])
 }
 
 protocol WindyHomePageWireFrameOutput: NSObjectProtocol {
