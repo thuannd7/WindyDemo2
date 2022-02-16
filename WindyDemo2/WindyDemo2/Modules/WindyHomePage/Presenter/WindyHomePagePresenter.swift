@@ -45,6 +45,33 @@ extension WindyHomePagePresenter: WindyHomePageViewOutput {
         viewModel?.doRemoveFavorite(location)
         view?.doReloadView()
     }
+    
+    func doSelectLocation(_ indexPath: IndexPath) {
+        guard let viewModel = viewModel, let location = viewModel.getLocation(index: indexPath.row) else {
+            return
+        }
+
+        let forecastData = viewModel.getLocationForecastData(index: indexPath.row)
+        wireFrame?.doGoDetail(lat: location.lat,
+                              long: location.long,
+                              locationName: location.name,
+                              isCurrentLocation: false,
+                              dataDetail: forecastData)
+    }
+    
+    func doViewCurrentLocationDetail() {
+        guard let viewModel = viewModel, let weatherData = viewModel.getCurrentLocationWeatherData() else {
+            return
+        }
+        
+        let forecastData = viewModel.getCurrentLocationForecastWeatherData()
+        
+        wireFrame?.doGoDetail(lat: weatherData.lat,
+                              long: weatherData.long,
+                              locationName: weatherData.name,
+                              isCurrentLocation: true,
+                              dataDetail: forecastData)
+    }
 }
 
 extension WindyHomePagePresenter {

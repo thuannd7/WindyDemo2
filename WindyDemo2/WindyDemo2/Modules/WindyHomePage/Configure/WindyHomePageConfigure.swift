@@ -41,6 +41,8 @@ protocol WindyHomePageViewOutput: NSObjectProtocol {
     func doPullToRefresh()
     func doSelectLocation()
     func doRemoveLocationFromFavoriteList(_ location: LocationModel)
+    func doSelectLocation(_ index: IndexPath)
+    func doViewCurrentLocationDetail()
 }
 
 //========================= VIEW MODEL =================
@@ -86,6 +88,11 @@ protocol WindyHomePageInteractorOutput: NSObjectProtocol {
 // MARK: INTERACTOR
 protocol WindyHomePageWireFrameInput: NSObjectProtocol {
     func doOpenSelectLocationScreen(listLocationSelected: [LocationModel])
+    func doGoDetail(lat _lat: Double,
+                    long _long: Double,
+                    locationName _locationName: String,
+                    isCurrentLocation _isCurrentLocation: Bool,
+                    dataDetail: ForecastWeatherDataModel?) 
 }
 
 protocol WindyHomePageWireFrameOutput: NSObjectProtocol {

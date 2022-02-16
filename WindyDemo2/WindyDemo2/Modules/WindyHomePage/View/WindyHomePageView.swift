@@ -86,6 +86,11 @@ extension WindyHomePageView: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            presenter?.doViewCurrentLocationDetail()
+        } else if indexPath.section == 1 && viewModel.getListLocationCount() > 0 {
+            presenter?.doSelectLocation(indexPath)
+        }
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
