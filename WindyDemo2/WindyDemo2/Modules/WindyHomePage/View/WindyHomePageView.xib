@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WindyHomePageView" customModule="WindyDemo2" customModuleProvider="target">
             <connections>
                 <outlet property="btnAdd" destination="6VE-Wy-8F1" id="Qm0-1L-i65"/>
+                <outlet property="lblTitle" destination="iRi-F6-y5s" id="6dt-e8-6C2"/>
                 <outlet property="lblUpdate" destination="hPI-Cv-dhW" id="HCy-JQ-5VG"/>
                 <outlet property="tbvMain" destination="app-ds-MSH" id="kbm-Tp-xDk"/>
                 <outlet property="view" destination="3XE-b6-vRi" id="Ygu-fE-FSE"/>

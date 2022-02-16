@@ -23,5 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = _window
         return true
     }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return true
+    }
 }
 

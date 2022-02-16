@@ -14,9 +14,9 @@ class WindyHomePageConfigure: NSObject {
         let viewModel = WindyHomePageViewModel()
 
         presenter.viewModel = viewModel
-        presenter.view = view
         presenter.interactor = interactor
         presenter.wireFrame = wireFrame
+        presenter.view = view
 
         view.presenter = presenter
         view.viewModel = viewModel
@@ -31,12 +31,14 @@ class WindyHomePageConfigure: NSObject {
 // MARK: 
 // MARK: VIEW
 protocol WindyHomePageViewInput: NSObjectProtocol {
-
+    func doStopLoading()
+    func doReloadView()
 }
 
 protocol WindyHomePageViewOutput: NSObjectProtocol {
     func viewDidLoad()
-    func viewWillAppear()
+    func viewDidAppear()
+    func doPullToRefresh()
 }
 
 //========================= VIEW MODEL =================
@@ -44,12 +46,18 @@ protocol WindyHomePageViewOutput: NSObjectProtocol {
 // MARK: 
 // MARK: VIEW MODEL
 protocol WindyHomePageViewModelInput: NSObjectProtocol {
-
+    func doUpdateLastTime()
+    func doUpdateForecaseWeatherData(key: String, data: ForecastWeatherDataModel?)
+    func didUpdateCurrentLocationWeatherData(data: LocationWeatherDataModel)
 }
 
 protocol WindyHomePageViewModelOutput: NSObjectProtocol {
-
     func getTitle() -> String?
+    func getLastTimeStr() -> String?
+    func getListLocationCount() -> Int
+    func getCurrentLocationWeatherData() -> LocationWeatherDataModel?
+    func getCurrentLocationForecastWeatherData() -> ForecastWeatherDataModel?
+    func getWeatherData(location: LocationModel) -> LocationWeatherDataModel?
 }
 
 //========================= INTERACTOR =================
@@ -57,11 +65,14 @@ protocol WindyHomePageViewModelOutput: NSObjectProtocol {
 // MARK:
 // MARK: INTERACTOR
 protocol WindyHomePageInteractorInput: NSObjectProtocol {
-
+    func doGetCurrentLocationData(_ lat: Double, _ long: Double)
+    func doGetForecastWeatherData(key: String, _ lat: Double, _ long: Double)
 }
 
 protocol WindyHomePageInteractorOutput: NSObjectProtocol {
-
+    func didGetForecastWeatherData(key: String, data: ForecastWeatherDataModel)
+    func didCurrentLocationWeatherData(data: LocationWeatherDataModel)
+    func didRequestFailed(err: Error)
 }
 
 //========================= WIREFRAME =================

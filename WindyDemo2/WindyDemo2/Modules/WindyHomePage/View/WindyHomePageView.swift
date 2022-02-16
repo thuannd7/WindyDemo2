@@ -5,27 +5,28 @@
 import Foundation
 import UIKit
 import MGSwipeTableCell
-import SVPullToRefresh
 
 class WindyHomePageView: BaseViewController
 {
     var presenter: WindyHomePageViewOutput?
-    weak var viewModel: WindyHomePageViewModelOutput?
+    weak var viewModel: WindyHomePageViewModelOutput!
     
-    @IBOutlet weak var tbvMain: UITableView!
+    @IBOutlet weak var lblTitle: UILabel?
+    @IBOutlet weak var tbvMain: UITableView?
     @IBOutlet var viewAddLocation: UIView!
     @IBOutlet weak var btnAdd: UIButton!
-    @IBOutlet weak var lblUpdate: UILabel!
+    @IBOutlet weak var lblUpdate: UILabel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
         setUpView()
+        doReloadView()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        presenter?.viewWillAppear()
+        presenter?.viewDidAppear()
     }
     
     // MARK:
@@ -36,27 +37,48 @@ class WindyHomePageView: BaseViewController
     // MARK:
     // MARK:  METHODS
     func setUpView() {
-        
+        tbvMain?.tableFooterView = viewAddLocation
+        tbvMain?.kAddPullToRefreshCustom { [weak self] in
+            self?.presenter?.doPullToRefresh()
+        }
     }
 }
 
 extension WindyHomePageView: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        if section == 0 {
+            return 1
+        }
+        
+        let count = viewModel.getListLocationCount()
+        return count == 0 ? 1 : count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.section == 0 {
+            let cell = HomeCurrenLocationTableViewCell.dequeCellWithTable(tableView)
+            cell.billData(viewModel.getCurrentLocationWeatherData(), viewModel.getCurrentLocationForecastWeatherData())
+            return cell
+        }
+        
+        let count = viewModel.getListLocationCount()
+        if count == 0 {
+            let cell = NoDataTableViewCell.dequeCellWithTable(tableView)
+            return cell
+        }
+        
         let cell = HomeLocationTableViewCell.dequeCellWithTable(tableView)
         cell.delegate = self
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50.0
+        let count = viewModel.getListLocationCount()
+        return indexPath.section == 0 ? 220.0 : (count == 0 ? 300.0 : 50.0)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -78,7 +100,7 @@ extension WindyHomePageView: MGSwipeTableCellDelegate {
                                      backgroundColor: AppColor.redColor,
                                      padding: 18)
             { (item: MGSwipeTableCell) -> Bool in
-                if let indexPath = weakSelf?.tbvMain.indexPath(for: cell) {
+                if let indexPath = weakSelf?.tbvMain?.indexPath(for: cell) {
                     weakSelf?.doRemoveFavorite(indexPath)
                 }
                 return true
@@ -99,7 +121,7 @@ extension WindyHomePageView: MGSwipeTableCellDelegate {
                                       preferredStyle: .alert)
         let actionRemove = UIAlertAction(title: "Remove".localized, style: .destructive) { _ in
             if let strong = weakSelf {
-                strong.tbvMain.reloadData()
+                strong.tbvMain?.reloadData()
             }
         }
         
@@ -111,5 +133,15 @@ extension WindyHomePageView: MGSwipeTableCellDelegate {
 }
 
 extension WindyHomePageView: WindyHomePageViewInput {
+    func doReloadView() {
+        lblTitle?.text = viewModel.getTitle()
+        lblUpdate?.text = viewModel.getLastTimeStr()
+        tbvMain?.kPullToRefreshStopAnimation()
+        tbvMain?.reloadData()
+    }
     
+    func doStopLoading() {
+        tbvMain?.kPullToRefreshStopAnimation()
+        tbvMain?.reloadData()
+    }
 }

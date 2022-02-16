@@ -57,6 +57,12 @@
 		E468C9BE27BCFDA0009B7993 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9BD27BCFDA0009B7993 /* DictionaryExtension.swift */; };
 		E468C9C127BCFDC1009B7993 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9C027BCFDC0009B7993 /* StringExtension.swift */; };
 		E468C9C327BCFDE4009B7993 /* StringRemoveVietnameseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9C227BCFDE4009B7993 /* StringRemoveVietnameseExtension.swift */; };
+		E468C9C627BD0120009B7993 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9C527BD0120009B7993 /* DateExtension.swift */; };
+		E468C9C927BD0398009B7993 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9C827BD0398009B7993 /* UIScrollViewExtension.swift */; };
+		E468C9CC27BD09A4009B7993 /* DoubleTempExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9CB27BD09A4009B7993 /* DoubleTempExtension.swift */; };
+		E468C9D027BD0C29009B7993 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9CF27BD0C29009B7993 /* LocationHelper.swift */; };
+		E468C9D327BD0E50009B7993 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9D227BD0E50009B7993 /* DataManager.swift */; };
+		E468C9D527BD0E70009B7993 /* LocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9D427BD0E70009B7993 /* LocationDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +144,12 @@
 		E468C9BD27BCFDA0009B7993 /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
 		E468C9C027BCFDC0009B7993 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		E468C9C227BCFDE4009B7993 /* StringRemoveVietnameseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringRemoveVietnameseExtension.swift; sourceTree = "<group>"; };
+		E468C9C527BD0120009B7993 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		E468C9C827BD0398009B7993 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
+		E468C9CB27BD09A4009B7993 /* DoubleTempExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleTempExtension.swift; sourceTree = "<group>"; };
+		E468C9CF27BD0C29009B7993 /* LocationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
+		E468C9D227BD0E50009B7993 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		E468C9D427BD0E70009B7993 /* LocationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
 		E66CF2751ABFEFEA5497226C /* Pods-WindyDemo2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindyDemo2Tests.debug.xcconfig"; path = "Target Support Files/Pods-WindyDemo2Tests/Pods-WindyDemo2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -217,6 +229,7 @@
 		E468C8B827BCE42D009B7993 /* WindyDemo2 */ = {
 			isa = PBXGroup;
 			children = (
+				E468C9CD27BD0BFF009B7993 /* Utils */,
 				E468C98F27BCF58F009B7993 /* Languages */,
 				E468C8F227BCE6BA009B7993 /* Resources */,
 				E468C8F127BCE6A3009B7993 /* Extension */,
@@ -272,6 +285,7 @@
 		E468C8F027BCE69F009B7993 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E468C9D127BD0E3F009B7993 /* Data */,
 				E468C9A927BCFD1E009B7993 /* BusinessModels */,
 				E468C97B27BCF23C009B7993 /* Services */,
 			);
@@ -281,6 +295,9 @@
 		E468C8F127BCE6A3009B7993 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				E468C9CA27BD0992009B7993 /* Double */,
+				E468C9C727BD038D009B7993 /* ScrollView */,
+				E468C9C427BD0115009B7993 /* Date */,
 				E468C9BF27BCFDB2009B7993 /* String */,
 				E468C9BC27BCFD8F009B7993 /* NSDictionary */,
 				E468C9A827BCFCC9009B7993 /* JSON */,
@@ -311,9 +328,9 @@
 			isa = PBXGroup;
 			children = (
 				E468C96927BCF035009B7993 /* Configure */,
-				E468C96D27BCF035009B7993 /* Interactor */,
-				E468C96B27BCF035009B7993 /* Presenter */,
 				E468C97127BCF035009B7993 /* View */,
+				E468C96B27BCF035009B7993 /* Presenter */,
+				E468C96D27BCF035009B7993 /* Interactor */,
 				E468C96727BCF035009B7993 /* ViewModel */,
 				E468C96F27BCF035009B7993 /* WireFrame */,
 			);
@@ -475,6 +492,47 @@
 				E468C9C027BCFDC0009B7993 /* StringExtension.swift */,
 			);
 			path = String;
+			sourceTree = "<group>";
+		};
+		E468C9C427BD0115009B7993 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				E468C9C527BD0120009B7993 /* DateExtension.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		E468C9C727BD038D009B7993 /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				E468C9C827BD0398009B7993 /* UIScrollViewExtension.swift */,
+			);
+			path = ScrollView;
+			sourceTree = "<group>";
+		};
+		E468C9CA27BD0992009B7993 /* Double */ = {
+			isa = PBXGroup;
+			children = (
+				E468C9CB27BD09A4009B7993 /* DoubleTempExtension.swift */,
+			);
+			path = Double;
+			sourceTree = "<group>";
+		};
+		E468C9CD27BD0BFF009B7993 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E468C9CF27BD0C29009B7993 /* LocationHelper.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E468C9D127BD0E3F009B7993 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E468C9D227BD0E50009B7993 /* DataManager.swift */,
+				E468C9D427BD0E70009B7993 /* LocationDataManager.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -723,11 +781,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E468C97827BCF035009B7993 /* WindyHomePageWireFrame.swift in Sources */,
+				E468C9D327BD0E50009B7993 /* DataManager.swift in Sources */,
 				E468C98927BCF313009B7993 /* HomeCurrenLocationTableViewCell.swift in Sources */,
 				E468C97627BCF035009B7993 /* WindyHomePagePresenter.swift in Sources */,
 				E468C9A427BCFC7F009B7993 /* APIBaseRequestService.swift in Sources */,
 				E468C97A27BCF035009B7993 /* WindyHomePageView.swift in Sources */,
 				E468C91927BCEB5E009B7993 /* UIViewControllerExtension.swift in Sources */,
+				E468C9D527BD0E70009B7993 /* LocationDataManager.swift in Sources */,
 				E468C99527BCF851009B7993 /* AppMacro.swift in Sources */,
 				E468C99927BCF9D5009B7993 /* UIColorExtensions.swift in Sources */,
 				E468C9C127BCFDC1009B7993 /* StringExtension.swift in Sources */,
@@ -735,6 +795,7 @@
 				E468C8BE27BCE42D009B7993 /* ViewController.swift in Sources */,
 				E468C9B627BCFD30009B7993 /* WindInfor.swift in Sources */,
 				E468C98727BCF313009B7993 /* NoDataTableViewCell.swift in Sources */,
+				E468C9C627BD0120009B7993 /* DateExtension.swift in Sources */,
 				E468C9B527BCFD30009B7993 /* WeatherInfor.swift in Sources */,
 				E468C9B827BCFD30009B7993 /* ForecastWeatherDataModel.swift in Sources */,
 				E468C97427BCF035009B7993 /* WindyHomePageViewModel.swift in Sources */,
@@ -747,13 +808,16 @@
 				E468C9C327BCFDE4009B7993 /* StringRemoveVietnameseExtension.swift in Sources */,
 				E468C9B327BCFD30009B7993 /* SysInfor.swift in Sources */,
 				E468C9A727BCFC7F009B7993 /* WeatherService.swift in Sources */,
+				E468C9C927BD0398009B7993 /* UIScrollViewExtension.swift in Sources */,
 				E468C8BA27BCE42D009B7993 /* AppDelegate.swift in Sources */,
 				E468C9A527BCFC7F009B7993 /* APIListener.swift in Sources */,
 				E468C93127BCEBFB009B7993 /* BaseViewController.swift in Sources */,
 				E468C99327BCF611009B7993 /* LocalizationStringHelper.swift in Sources */,
 				E468C9BE27BCFDA0009B7993 /* DictionaryExtension.swift in Sources */,
 				E468C97D27BCF2C2009B7993 /* UITableViewCellExtension.swift in Sources */,
+				E468C9D027BD0C29009B7993 /* LocationHelper.swift in Sources */,
 				E468C99727BCF9A7009B7993 /* AppColor.swift in Sources */,
+				E468C9CC27BD09A4009B7993 /* DoubleTempExtension.swift in Sources */,
 				E468C9BA27BCFD30009B7993 /* TempInfor.swift in Sources */,
 				E468C9A327BCFC7F009B7993 /* APIRequestDataProvider.swift in Sources */,
 				E468C9BB27BCFD30009B7993 /* LocationWeatherDataModel.swift in Sources */,
@@ -862,7 +926,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -917,7 +981,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
