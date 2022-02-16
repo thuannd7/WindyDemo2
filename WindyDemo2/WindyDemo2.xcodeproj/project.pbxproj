@@ -65,6 +65,14 @@
 		E468C9DE27BD3DA3009B7993 /* LocationResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9DA27BD3DA3009B7993 /* LocationResultTableViewCell.swift */; };
 		E468C9DF27BD3DA3009B7993 /* LocationResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E468C9DB27BD3DA3009B7993 /* LocationResultTableViewCell.xib */; };
 		E468C9E027BD3DA3009B7993 /* SelectLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E468C9DC27BD3DA3009B7993 /* SelectLocationViewController.xib */; };
+		E468C9FB27BD6838009B7993 /* LocationDetailConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9EF27BD6838009B7993 /* LocationDetailConfigure.swift */; };
+		E468C9FC27BD6838009B7993 /* LocationDetailWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9F127BD6838009B7993 /* LocationDetailWireFrame.swift */; };
+		E468C9FD27BD6838009B7993 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9F327BD6838009B7993 /* LocationDetailView.swift */; };
+		E468C9FE27BD6838009B7993 /* LocationDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E468C9F427BD6838009B7993 /* LocationDetailView.xib */; };
+		E468C9FF27BD6838009B7993 /* LocationDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9F627BD6838009B7993 /* LocationDetailInteractor.swift */; };
+		E468CA0027BD6838009B7993 /* LocationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9F827BD6838009B7993 /* LocationDetailViewModel.swift */; };
+		E468CA0127BD6838009B7993 /* LocationDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9FA27BD6838009B7993 /* LocationDetailPresenter.swift */; };
+		E468CA0427BD70BD009B7993 /* map_windy.png in Resources */ = {isa = PBXBuildFile; fileRef = E468CA0327BD70BD009B7993 /* map_windy.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +162,14 @@
 		E468C9DA27BD3DA3009B7993 /* LocationResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationResultTableViewCell.swift; sourceTree = "<group>"; };
 		E468C9DB27BD3DA3009B7993 /* LocationResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationResultTableViewCell.xib; sourceTree = "<group>"; };
 		E468C9DC27BD3DA3009B7993 /* SelectLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectLocationViewController.xib; sourceTree = "<group>"; };
+		E468C9EF27BD6838009B7993 /* LocationDetailConfigure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailConfigure.swift; sourceTree = "<group>"; };
+		E468C9F127BD6838009B7993 /* LocationDetailWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailWireFrame.swift; sourceTree = "<group>"; };
+		E468C9F327BD6838009B7993 /* LocationDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
+		E468C9F427BD6838009B7993 /* LocationDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationDetailView.xib; sourceTree = "<group>"; };
+		E468C9F627BD6838009B7993 /* LocationDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailInteractor.swift; sourceTree = "<group>"; };
+		E468C9F827BD6838009B7993 /* LocationDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailViewModel.swift; sourceTree = "<group>"; };
+		E468C9FA27BD6838009B7993 /* LocationDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailPresenter.swift; sourceTree = "<group>"; };
+		E468CA0327BD70BD009B7993 /* map_windy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_windy.png; sourceTree = "<group>"; };
 		E66CF2751ABFEFEA5497226C /* Pods-WindyDemo2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindyDemo2Tests.debug.xcconfig"; path = "Target Support Files/Pods-WindyDemo2Tests/Pods-WindyDemo2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -272,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				E468C90327BCEB13009B7993 /* WindyHomePage */,
+				E468C9E127BD6811009B7993 /* LocationDetail */,
 				E468C9D627BD3B3B009B7993 /* Other */,
 			);
 			path = Modules;
@@ -316,6 +333,7 @@
 		E468C8F227BCE6BA009B7993 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E468CA0227BD70B0009B7993 /* images */,
 				E468C8F327BCE6BF009B7993 /* json */,
 			);
 			path = Resources;
@@ -565,6 +583,76 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		E468C9E127BD6811009B7993 /* LocationDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E468C9EE27BD6838009B7993 /* Configure */,
+				E468C9F527BD6838009B7993 /* Interactor */,
+				E468C9F927BD6838009B7993 /* Presenter */,
+				E468C9F227BD6838009B7993 /* View */,
+				E468C9F727BD6838009B7993 /* ViewModel */,
+				E468C9F027BD6838009B7993 /* WireFrame */,
+			);
+			path = LocationDetail;
+			sourceTree = "<group>";
+		};
+		E468C9EE27BD6838009B7993 /* Configure */ = {
+			isa = PBXGroup;
+			children = (
+				E468C9EF27BD6838009B7993 /* LocationDetailConfigure.swift */,
+			);
+			path = Configure;
+			sourceTree = "<group>";
+		};
+		E468C9F027BD6838009B7993 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				E468C9F127BD6838009B7993 /* LocationDetailWireFrame.swift */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		E468C9F227BD6838009B7993 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E468C9F327BD6838009B7993 /* LocationDetailView.swift */,
+				E468C9F427BD6838009B7993 /* LocationDetailView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E468C9F527BD6838009B7993 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E468C9F627BD6838009B7993 /* LocationDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E468C9F727BD6838009B7993 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E468C9F827BD6838009B7993 /* LocationDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E468C9F927BD6838009B7993 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E468C9FA27BD6838009B7993 /* LocationDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E468CA0227BD70B0009B7993 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				E468CA0327BD70BD009B7993 /* map_windy.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -675,6 +763,7 @@
 			files = (
 				E468C8C627BCE432009B7993 /* LaunchScreen.storyboard in Resources */,
 				E468C98827BCF313009B7993 /* HomeLocationTableViewCell.xib in Resources */,
+				E468C9FE27BD6838009B7993 /* LocationDetailView.xib in Resources */,
 				E468C9DF27BD3DA3009B7993 /* LocationResultTableViewCell.xib in Resources */,
 				E468C98E27BCF313009B7993 /* NoDataTableViewCell.xib in Resources */,
 				E468C98A27BCF313009B7993 /* HomeCurrenLocationTableViewCell.xib in Resources */,
@@ -683,6 +772,7 @@
 				E468C99127BCF5B5009B7993 /* lang-en.json in Resources */,
 				E468C8C327BCE432009B7993 /* Assets.xcassets in Resources */,
 				E468C9E027BD3DA3009B7993 /* SelectLocationViewController.xib in Resources */,
+				E468CA0427BD70BD009B7993 /* map_windy.png in Resources */,
 				E468C8C127BCE42D009B7993 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -825,6 +915,7 @@
 				E468C9C127BCFDC1009B7993 /* StringExtension.swift in Sources */,
 				E468C97727BCF035009B7993 /* WindyHomePageInteractor.swift in Sources */,
 				E468C8BE27BCE42D009B7993 /* ViewController.swift in Sources */,
+				E468C9FB27BD6838009B7993 /* LocationDetailConfigure.swift in Sources */,
 				E468C9B627BCFD30009B7993 /* WindInfor.swift in Sources */,
 				E468C98727BCF313009B7993 /* NoDataTableViewCell.swift in Sources */,
 				E468C9C627BD0120009B7993 /* DateExtension.swift in Sources */,
@@ -842,16 +933,21 @@
 				E468C9A727BCFC7F009B7993 /* WeatherService.swift in Sources */,
 				E468C9C927BD0398009B7993 /* UIScrollViewExtension.swift in Sources */,
 				E468C8BA27BCE42D009B7993 /* AppDelegate.swift in Sources */,
+				E468C9FF27BD6838009B7993 /* LocationDetailInteractor.swift in Sources */,
+				E468CA0027BD6838009B7993 /* LocationDetailViewModel.swift in Sources */,
 				E468C9A527BCFC7F009B7993 /* APIListener.swift in Sources */,
 				E468C93127BCEBFB009B7993 /* BaseViewController.swift in Sources */,
 				E468C99327BCF611009B7993 /* LocalizationStringHelper.swift in Sources */,
 				E468C9BE27BCFDA0009B7993 /* DictionaryExtension.swift in Sources */,
 				E468C97D27BCF2C2009B7993 /* UITableViewCellExtension.swift in Sources */,
 				E468C9D027BD0C29009B7993 /* LocationHelper.swift in Sources */,
+				E468C9FD27BD6838009B7993 /* LocationDetailView.swift in Sources */,
 				E468C99727BCF9A7009B7993 /* AppColor.swift in Sources */,
 				E468C9CC27BD09A4009B7993 /* DoubleTempExtension.swift in Sources */,
 				E468C9BA27BCFD30009B7993 /* TempInfor.swift in Sources */,
+				E468CA0127BD6838009B7993 /* LocationDetailPresenter.swift in Sources */,
 				E468C9A327BCFC7F009B7993 /* APIRequestDataProvider.swift in Sources */,
+				E468C9FC27BD6838009B7993 /* LocationDetailWireFrame.swift in Sources */,
 				E468C9BB27BCFD30009B7993 /* LocationWeatherDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

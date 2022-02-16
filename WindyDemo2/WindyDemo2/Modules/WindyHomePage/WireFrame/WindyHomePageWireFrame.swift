@@ -22,4 +22,18 @@ extension WindyHomePageWireFrame: WindyHomePageWireFrameInput {
             self?.presenter?.didSelectLocation(location)
         }
     }
+    
+    func doGoDetail(lat _lat: Double,
+                    long _long: Double,
+                    locationName _locationName: String,
+                    isCurrentLocation _isCurrentLocation: Bool,
+                    dataDetail: ForecastWeatherDataModel?) {
+        let vc = LocationDetailConfigure.viewController(lat: _lat,
+                                                        long: _long,
+                                                        locationName: _locationName,
+                                                        isCurrentLocation: _isCurrentLocation,
+                                                        dataDetail: dataDetail)
+        vc.modalPresentationStyle = .fullScreen
+        viewController.present(vc, animated: true, completion: nil)
+    }
 }
