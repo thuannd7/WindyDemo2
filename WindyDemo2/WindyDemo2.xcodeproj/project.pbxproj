@@ -1,0 +1,966 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6A1F8BE10F49A25E36AF6FE4 /* Pods_WindyDemo2_WindyDemo2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC72C5EBB2310E31B7F9120 /* Pods_WindyDemo2_WindyDemo2UITests.framework */; };
+		BCF401185DA259368D1F0D4B /* Pods_WindyDemo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C82DD5474762485767F769 /* Pods_WindyDemo2.framework */; };
+		DAA48EE5DB3ADCB00636D175 /* Pods_WindyDemo2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BAAA83EDC39ECEB61B77F49 /* Pods_WindyDemo2Tests.framework */; };
+		E468C8BA27BCE42D009B7993 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C8B927BCE42D009B7993 /* AppDelegate.swift */; };
+		E468C8BE27BCE42D009B7993 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C8BD27BCE42D009B7993 /* ViewController.swift */; };
+		E468C8C127BCE42D009B7993 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E468C8BF27BCE42D009B7993 /* Main.storyboard */; };
+		E468C8C327BCE432009B7993 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E468C8C227BCE432009B7993 /* Assets.xcassets */; };
+		E468C8C627BCE432009B7993 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E468C8C427BCE432009B7993 /* LaunchScreen.storyboard */; };
+		E468C8D127BCE432009B7993 /* WindyDemo2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C8D027BCE432009B7993 /* WindyDemo2Tests.swift */; };
+		E468C8DC27BCE432009B7993 /* WindyDemo2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C8DB27BCE432009B7993 /* WindyDemo2UITests.swift */; };
+		E468C8F627BCE6E8009B7993 /* city.list.json in Resources */ = {isa = PBXBuildFile; fileRef = E468C8F527BCE6E8009B7993 /* city.list.json */; };
+		E468C91927BCEB5E009B7993 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C91827BCEB5E009B7993 /* UIViewControllerExtension.swift */; };
+		E468C93127BCEBFB009B7993 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C93027BCEBFB009B7993 /* BaseViewController.swift */; };
+		E468C97427BCF035009B7993 /* WindyHomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C96827BCF035009B7993 /* WindyHomePageViewModel.swift */; };
+		E468C97527BCF035009B7993 /* WindyHomePageConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C96A27BCF035009B7993 /* WindyHomePageConfigure.swift */; };
+		E468C97627BCF035009B7993 /* WindyHomePagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C96C27BCF035009B7993 /* WindyHomePagePresenter.swift */; };
+		E468C97727BCF035009B7993 /* WindyHomePageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C96E27BCF035009B7993 /* WindyHomePageInteractor.swift */; };
+		E468C97827BCF035009B7993 /* WindyHomePageWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C97027BCF035009B7993 /* WindyHomePageWireFrame.swift */; };
+		E468C97927BCF035009B7993 /* WindyHomePageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E468C97227BCF035009B7993 /* WindyHomePageView.xib */; };
+		E468C97A27BCF035009B7993 /* WindyHomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C97327BCF035009B7993 /* WindyHomePageView.swift */; };
+		E468C97D27BCF2C2009B7993 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C97C27BCF2C1009B7993 /* UITableViewCellExtension.swift */; };
+		E468C98727BCF313009B7993 /* NoDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C97F27BCF313009B7993 /* NoDataTableViewCell.swift */; };
+		E468C98827BCF313009B7993 /* HomeLocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E468C98027BCF313009B7993 /* HomeLocationTableViewCell.xib */; };
+		E468C98927BCF313009B7993 /* HomeCurrenLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C98127BCF313009B7993 /* HomeCurrenLocationTableViewCell.swift */; };
+		E468C98A27BCF313009B7993 /* HomeCurrenLocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E468C98227BCF313009B7993 /* HomeCurrenLocationTableViewCell.xib */; };
+		E468C98B27BCF313009B7993 /* HomeAddLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C98327BCF313009B7993 /* HomeAddLocationTableViewCell.swift */; };
+		E468C98C27BCF313009B7993 /* HomeAddLocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E468C98427BCF313009B7993 /* HomeAddLocationTableViewCell.xib */; };
+		E468C98D27BCF313009B7993 /* HomeLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C98527BCF313009B7993 /* HomeLocationTableViewCell.swift */; };
+		E468C98E27BCF313009B7993 /* NoDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E468C98627BCF313009B7993 /* NoDataTableViewCell.xib */; };
+		E468C99127BCF5B5009B7993 /* lang-en.json in Resources */ = {isa = PBXBuildFile; fileRef = E468C99027BCF5B5009B7993 /* lang-en.json */; };
+		E468C99327BCF611009B7993 /* LocalizationStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C99227BCF611009B7993 /* LocalizationStringHelper.swift */; };
+		E468C99527BCF851009B7993 /* AppMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C99427BCF850009B7993 /* AppMacro.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E468C8CD27BCE432009B7993 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E468C8AE27BCE42D009B7993 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E468C8B527BCE42D009B7993;
+			remoteInfo = WindyDemo2;
+		};
+		E468C8D827BCE432009B7993 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E468C8AE27BCE42D009B7993 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E468C8B527BCE42D009B7993;
+			remoteInfo = WindyDemo2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0DE5B3F2081B1D54AB375BA0 /* Pods-WindyDemo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindyDemo2.release.xcconfig"; path = "Target Support Files/Pods-WindyDemo2/Pods-WindyDemo2.release.xcconfig"; sourceTree = "<group>"; };
+		14E8448ADEC9B3AD4E794737 /* Pods-WindyDemo2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindyDemo2Tests.release.xcconfig"; path = "Target Support Files/Pods-WindyDemo2Tests/Pods-WindyDemo2Tests.release.xcconfig"; sourceTree = "<group>"; };
+		1BB4499E0BC73F071C0803D1 /* Pods-WindyDemo2-WindyDemo2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindyDemo2-WindyDemo2UITests.release.xcconfig"; path = "Target Support Files/Pods-WindyDemo2-WindyDemo2UITests/Pods-WindyDemo2-WindyDemo2UITests.release.xcconfig"; sourceTree = "<group>"; };
+		5327A0610E0D08E31CF36BDC /* Pods-WindyDemo2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindyDemo2.debug.xcconfig"; path = "Target Support Files/Pods-WindyDemo2/Pods-WindyDemo2.debug.xcconfig"; sourceTree = "<group>"; };
+		9BAAA83EDC39ECEB61B77F49 /* Pods_WindyDemo2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WindyDemo2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0C82DD5474762485767F769 /* Pods_WindyDemo2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WindyDemo2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C66F7C615C90832D5DBAA1D8 /* Pods-WindyDemo2-WindyDemo2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindyDemo2-WindyDemo2UITests.debug.xcconfig"; path = "Target Support Files/Pods-WindyDemo2-WindyDemo2UITests/Pods-WindyDemo2-WindyDemo2UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DAC72C5EBB2310E31B7F9120 /* Pods_WindyDemo2_WindyDemo2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WindyDemo2_WindyDemo2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E468C8B627BCE42D009B7993 /* WindyDemo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WindyDemo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E468C8B927BCE42D009B7993 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E468C8BD27BCE42D009B7993 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E468C8C027BCE42D009B7993 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E468C8C227BCE432009B7993 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E468C8C527BCE432009B7993 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E468C8C727BCE432009B7993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E468C8CC27BCE432009B7993 /* WindyDemo2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WindyDemo2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E468C8D027BCE432009B7993 /* WindyDemo2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindyDemo2Tests.swift; sourceTree = "<group>"; };
+		E468C8D227BCE432009B7993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E468C8D727BCE432009B7993 /* WindyDemo2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WindyDemo2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E468C8DB27BCE432009B7993 /* WindyDemo2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindyDemo2UITests.swift; sourceTree = "<group>"; };
+		E468C8DD27BCE432009B7993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E468C8F527BCE6E8009B7993 /* city.list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city.list.json; sourceTree = "<group>"; };
+		E468C91827BCEB5E009B7993 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		E468C93027BCEBFB009B7993 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E468C96827BCF035009B7993 /* WindyHomePageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindyHomePageViewModel.swift; sourceTree = "<group>"; };
+		E468C96A27BCF035009B7993 /* WindyHomePageConfigure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindyHomePageConfigure.swift; sourceTree = "<group>"; };
+		E468C96C27BCF035009B7993 /* WindyHomePagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindyHomePagePresenter.swift; sourceTree = "<group>"; };
+		E468C96E27BCF035009B7993 /* WindyHomePageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindyHomePageInteractor.swift; sourceTree = "<group>"; };
+		E468C97027BCF035009B7993 /* WindyHomePageWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindyHomePageWireFrame.swift; sourceTree = "<group>"; };
+		E468C97227BCF035009B7993 /* WindyHomePageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WindyHomePageView.xib; sourceTree = "<group>"; };
+		E468C97327BCF035009B7993 /* WindyHomePageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindyHomePageView.swift; sourceTree = "<group>"; };
+		E468C97C27BCF2C1009B7993 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
+		E468C97F27BCF313009B7993 /* NoDataTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoDataTableViewCell.swift; sourceTree = "<group>"; };
+		E468C98027BCF313009B7993 /* HomeLocationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeLocationTableViewCell.xib; sourceTree = "<group>"; };
+		E468C98127BCF313009B7993 /* HomeCurrenLocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCurrenLocationTableViewCell.swift; sourceTree = "<group>"; };
+		E468C98227BCF313009B7993 /* HomeCurrenLocationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCurrenLocationTableViewCell.xib; sourceTree = "<group>"; };
+		E468C98327BCF313009B7993 /* HomeAddLocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeAddLocationTableViewCell.swift; sourceTree = "<group>"; };
+		E468C98427BCF313009B7993 /* HomeAddLocationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeAddLocationTableViewCell.xib; sourceTree = "<group>"; };
+		E468C98527BCF313009B7993 /* HomeLocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLocationTableViewCell.swift; sourceTree = "<group>"; };
+		E468C98627BCF313009B7993 /* NoDataTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoDataTableViewCell.xib; sourceTree = "<group>"; };
+		E468C99027BCF5B5009B7993 /* lang-en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lang-en.json"; sourceTree = "<group>"; };
+		E468C99227BCF611009B7993 /* LocalizationStringHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationStringHelper.swift; sourceTree = "<group>"; };
+		E468C99427BCF850009B7993 /* AppMacro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMacro.swift; sourceTree = "<group>"; };
+		E66CF2751ABFEFEA5497226C /* Pods-WindyDemo2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindyDemo2Tests.debug.xcconfig"; path = "Target Support Files/Pods-WindyDemo2Tests/Pods-WindyDemo2Tests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E468C8B327BCE42D009B7993 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCF401185DA259368D1F0D4B /* Pods_WindyDemo2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E468C8C927BCE432009B7993 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAA48EE5DB3ADCB00636D175 /* Pods_WindyDemo2Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E468C8D427BCE432009B7993 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A1F8BE10F49A25E36AF6FE4 /* Pods_WindyDemo2_WindyDemo2UITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C99976FD84B2759628CE53E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0C82DD5474762485767F769 /* Pods_WindyDemo2.framework */,
+				DAC72C5EBB2310E31B7F9120 /* Pods_WindyDemo2_WindyDemo2UITests.framework */,
+				9BAAA83EDC39ECEB61B77F49 /* Pods_WindyDemo2Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		880BF4BF2BB24C66139E0377 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5327A0610E0D08E31CF36BDC /* Pods-WindyDemo2.debug.xcconfig */,
+				0DE5B3F2081B1D54AB375BA0 /* Pods-WindyDemo2.release.xcconfig */,
+				C66F7C615C90832D5DBAA1D8 /* Pods-WindyDemo2-WindyDemo2UITests.debug.xcconfig */,
+				1BB4499E0BC73F071C0803D1 /* Pods-WindyDemo2-WindyDemo2UITests.release.xcconfig */,
+				E66CF2751ABFEFEA5497226C /* Pods-WindyDemo2Tests.debug.xcconfig */,
+				14E8448ADEC9B3AD4E794737 /* Pods-WindyDemo2Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E468C8AD27BCE42D009B7993 = {
+			isa = PBXGroup;
+			children = (
+				E468C8B827BCE42D009B7993 /* WindyDemo2 */,
+				E468C8CF27BCE432009B7993 /* WindyDemo2Tests */,
+				E468C8DA27BCE432009B7993 /* WindyDemo2UITests */,
+				E468C8B727BCE42D009B7993 /* Products */,
+				880BF4BF2BB24C66139E0377 /* Pods */,
+				3C99976FD84B2759628CE53E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E468C8B727BCE42D009B7993 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E468C8B627BCE42D009B7993 /* WindyDemo2.app */,
+				E468C8CC27BCE432009B7993 /* WindyDemo2Tests.xctest */,
+				E468C8D727BCE432009B7993 /* WindyDemo2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E468C8B827BCE42D009B7993 /* WindyDemo2 */ = {
+			isa = PBXGroup;
+			children = (
+				E468C98F27BCF58F009B7993 /* Languages */,
+				E468C8F227BCE6BA009B7993 /* Resources */,
+				E468C8F127BCE6A3009B7993 /* Extension */,
+				E468C8F027BCE69F009B7993 /* Models */,
+				E468C8EF27BCE692009B7993 /* Base */,
+				E468C8E927BCE4E4009B7993 /* Modules */,
+				E468C8B927BCE42D009B7993 /* AppDelegate.swift */,
+				E468C8BD27BCE42D009B7993 /* ViewController.swift */,
+				E468C8BF27BCE42D009B7993 /* Main.storyboard */,
+				E468C8C227BCE432009B7993 /* Assets.xcassets */,
+				E468C8C427BCE432009B7993 /* LaunchScreen.storyboard */,
+				E468C8C727BCE432009B7993 /* Info.plist */,
+			);
+			path = WindyDemo2;
+			sourceTree = "<group>";
+		};
+		E468C8CF27BCE432009B7993 /* WindyDemo2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E468C8D027BCE432009B7993 /* WindyDemo2Tests.swift */,
+				E468C8D227BCE432009B7993 /* Info.plist */,
+			);
+			path = WindyDemo2Tests;
+			sourceTree = "<group>";
+		};
+		E468C8DA27BCE432009B7993 /* WindyDemo2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				E468C8DB27BCE432009B7993 /* WindyDemo2UITests.swift */,
+				E468C8DD27BCE432009B7993 /* Info.plist */,
+			);
+			path = WindyDemo2UITests;
+			sourceTree = "<group>";
+		};
+		E468C8E927BCE4E4009B7993 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E468C90327BCEB13009B7993 /* WindyHomePage */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		E468C8EF27BCE692009B7993 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E468C99427BCF850009B7993 /* AppMacro.swift */,
+				E468C93027BCEBFB009B7993 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E468C8F027BCE69F009B7993 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E468C97B27BCF23C009B7993 /* Services */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E468C8F127BCE6A3009B7993 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E468C91827BCEB5E009B7993 /* UIViewControllerExtension.swift */,
+				E468C97C27BCF2C1009B7993 /* UITableViewCellExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E468C8F227BCE6BA009B7993 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E468C8F327BCE6BF009B7993 /* json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E468C8F327BCE6BF009B7993 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				E468C8F527BCE6E8009B7993 /* city.list.json */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		E468C90327BCEB13009B7993 /* WindyHomePage */ = {
+			isa = PBXGroup;
+			children = (
+				E468C96927BCF035009B7993 /* Configure */,
+				E468C96D27BCF035009B7993 /* Interactor */,
+				E468C96B27BCF035009B7993 /* Presenter */,
+				E468C97127BCF035009B7993 /* View */,
+				E468C96727BCF035009B7993 /* ViewModel */,
+				E468C96F27BCF035009B7993 /* WireFrame */,
+			);
+			path = WindyHomePage;
+			sourceTree = "<group>";
+		};
+		E468C96727BCF035009B7993 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E468C96827BCF035009B7993 /* WindyHomePageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E468C96927BCF035009B7993 /* Configure */ = {
+			isa = PBXGroup;
+			children = (
+				E468C96A27BCF035009B7993 /* WindyHomePageConfigure.swift */,
+			);
+			path = Configure;
+			sourceTree = "<group>";
+		};
+		E468C96B27BCF035009B7993 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E468C96C27BCF035009B7993 /* WindyHomePagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E468C96D27BCF035009B7993 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E468C96E27BCF035009B7993 /* WindyHomePageInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E468C96F27BCF035009B7993 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				E468C97027BCF035009B7993 /* WindyHomePageWireFrame.swift */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		E468C97127BCF035009B7993 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E468C97327BCF035009B7993 /* WindyHomePageView.swift */,
+				E468C97227BCF035009B7993 /* WindyHomePageView.xib */,
+				E468C97E27BCF2E5009B7993 /* cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E468C97B27BCF23C009B7993 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E468C97E27BCF2E5009B7993 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				E468C98327BCF313009B7993 /* HomeAddLocationTableViewCell.swift */,
+				E468C98427BCF313009B7993 /* HomeAddLocationTableViewCell.xib */,
+				E468C98127BCF313009B7993 /* HomeCurrenLocationTableViewCell.swift */,
+				E468C98227BCF313009B7993 /* HomeCurrenLocationTableViewCell.xib */,
+				E468C98527BCF313009B7993 /* HomeLocationTableViewCell.swift */,
+				E468C98027BCF313009B7993 /* HomeLocationTableViewCell.xib */,
+				E468C97F27BCF313009B7993 /* NoDataTableViewCell.swift */,
+				E468C98627BCF313009B7993 /* NoDataTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		E468C98F27BCF58F009B7993 /* Languages */ = {
+			isa = PBXGroup;
+			children = (
+				E468C99027BCF5B5009B7993 /* lang-en.json */,
+				E468C99227BCF611009B7993 /* LocalizationStringHelper.swift */,
+			);
+			path = Languages;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E468C8B527BCE42D009B7993 /* WindyDemo2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E468C8E027BCE432009B7993 /* Build configuration list for PBXNativeTarget "WindyDemo2" */;
+			buildPhases = (
+				D7E26877C55D2CFCB43DB245 /* [CP] Check Pods Manifest.lock */,
+				E468C8B227BCE42D009B7993 /* Sources */,
+				E468C8B327BCE42D009B7993 /* Frameworks */,
+				E468C8B427BCE42D009B7993 /* Resources */,
+				510130128BF21F7C610C399A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WindyDemo2;
+			productName = WindyDemo2;
+			productReference = E468C8B627BCE42D009B7993 /* WindyDemo2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E468C8CB27BCE432009B7993 /* WindyDemo2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E468C8E327BCE432009B7993 /* Build configuration list for PBXNativeTarget "WindyDemo2Tests" */;
+			buildPhases = (
+				9F33FF8B7EA6DFC2310649AB /* [CP] Check Pods Manifest.lock */,
+				E468C8C827BCE432009B7993 /* Sources */,
+				E468C8C927BCE432009B7993 /* Frameworks */,
+				E468C8CA27BCE432009B7993 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E468C8CE27BCE432009B7993 /* PBXTargetDependency */,
+			);
+			name = WindyDemo2Tests;
+			productName = WindyDemo2Tests;
+			productReference = E468C8CC27BCE432009B7993 /* WindyDemo2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E468C8D627BCE432009B7993 /* WindyDemo2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E468C8E627BCE432009B7993 /* Build configuration list for PBXNativeTarget "WindyDemo2UITests" */;
+			buildPhases = (
+				EC3EBC004819EA861D2B5D24 /* [CP] Check Pods Manifest.lock */,
+				E468C8D327BCE432009B7993 /* Sources */,
+				E468C8D427BCE432009B7993 /* Frameworks */,
+				E468C8D527BCE432009B7993 /* Resources */,
+				CF1D14AB1C4F4AF5949BE7F1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E468C8D927BCE432009B7993 /* PBXTargetDependency */,
+			);
+			name = WindyDemo2UITests;
+			productName = WindyDemo2UITests;
+			productReference = E468C8D727BCE432009B7993 /* WindyDemo2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E468C8AE27BCE42D009B7993 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					E468C8B527BCE42D009B7993 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					E468C8CB27BCE432009B7993 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = E468C8B527BCE42D009B7993;
+					};
+					E468C8D627BCE432009B7993 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = E468C8B527BCE42D009B7993;
+					};
+				};
+			};
+			buildConfigurationList = E468C8B127BCE42D009B7993 /* Build configuration list for PBXProject "WindyDemo2" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E468C8AD27BCE42D009B7993;
+			productRefGroup = E468C8B727BCE42D009B7993 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E468C8B527BCE42D009B7993 /* WindyDemo2 */,
+				E468C8CB27BCE432009B7993 /* WindyDemo2Tests */,
+				E468C8D627BCE432009B7993 /* WindyDemo2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E468C8B427BCE42D009B7993 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E468C8C627BCE432009B7993 /* LaunchScreen.storyboard in Resources */,
+				E468C98827BCF313009B7993 /* HomeLocationTableViewCell.xib in Resources */,
+				E468C98E27BCF313009B7993 /* NoDataTableViewCell.xib in Resources */,
+				E468C98A27BCF313009B7993 /* HomeCurrenLocationTableViewCell.xib in Resources */,
+				E468C8F627BCE6E8009B7993 /* city.list.json in Resources */,
+				E468C97927BCF035009B7993 /* WindyHomePageView.xib in Resources */,
+				E468C99127BCF5B5009B7993 /* lang-en.json in Resources */,
+				E468C8C327BCE432009B7993 /* Assets.xcassets in Resources */,
+				E468C98C27BCF313009B7993 /* HomeAddLocationTableViewCell.xib in Resources */,
+				E468C8C127BCE42D009B7993 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E468C8CA27BCE432009B7993 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E468C8D527BCE432009B7993 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		510130128BF21F7C610C399A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WindyDemo2/Pods-WindyDemo2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WindyDemo2/Pods-WindyDemo2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WindyDemo2/Pods-WindyDemo2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F33FF8B7EA6DFC2310649AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WindyDemo2Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF1D14AB1C4F4AF5949BE7F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WindyDemo2-WindyDemo2UITests/Pods-WindyDemo2-WindyDemo2UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WindyDemo2-WindyDemo2UITests/Pods-WindyDemo2-WindyDemo2UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WindyDemo2-WindyDemo2UITests/Pods-WindyDemo2-WindyDemo2UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7E26877C55D2CFCB43DB245 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WindyDemo2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC3EBC004819EA861D2B5D24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WindyDemo2-WindyDemo2UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E468C8B227BCE42D009B7993 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E468C97827BCF035009B7993 /* WindyHomePageWireFrame.swift in Sources */,
+				E468C98927BCF313009B7993 /* HomeCurrenLocationTableViewCell.swift in Sources */,
+				E468C97627BCF035009B7993 /* WindyHomePagePresenter.swift in Sources */,
+				E468C97A27BCF035009B7993 /* WindyHomePageView.swift in Sources */,
+				E468C91927BCEB5E009B7993 /* UIViewControllerExtension.swift in Sources */,
+				E468C99527BCF851009B7993 /* AppMacro.swift in Sources */,
+				E468C97727BCF035009B7993 /* WindyHomePageInteractor.swift in Sources */,
+				E468C8BE27BCE42D009B7993 /* ViewController.swift in Sources */,
+				E468C98727BCF313009B7993 /* NoDataTableViewCell.swift in Sources */,
+				E468C97427BCF035009B7993 /* WindyHomePageViewModel.swift in Sources */,
+				E468C98B27BCF313009B7993 /* HomeAddLocationTableViewCell.swift in Sources */,
+				E468C98D27BCF313009B7993 /* HomeLocationTableViewCell.swift in Sources */,
+				E468C97527BCF035009B7993 /* WindyHomePageConfigure.swift in Sources */,
+				E468C8BA27BCE42D009B7993 /* AppDelegate.swift in Sources */,
+				E468C93127BCEBFB009B7993 /* BaseViewController.swift in Sources */,
+				E468C99327BCF611009B7993 /* LocalizationStringHelper.swift in Sources */,
+				E468C97D27BCF2C2009B7993 /* UITableViewCellExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E468C8C827BCE432009B7993 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E468C8D127BCE432009B7993 /* WindyDemo2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E468C8D327BCE432009B7993 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E468C8DC27BCE432009B7993 /* WindyDemo2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E468C8CE27BCE432009B7993 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E468C8B527BCE42D009B7993 /* WindyDemo2 */;
+			targetProxy = E468C8CD27BCE432009B7993 /* PBXContainerItemProxy */;
+		};
+		E468C8D927BCE432009B7993 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E468C8B527BCE42D009B7993 /* WindyDemo2 */;
+			targetProxy = E468C8D827BCE432009B7993 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E468C8BF27BCE42D009B7993 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E468C8C027BCE42D009B7993 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E468C8C427BCE432009B7993 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E468C8C527BCE432009B7993 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E468C8DE27BCE432009B7993 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E468C8DF27BCE432009B7993 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E468C8E127BCE432009B7993 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5327A0610E0D08E31CF36BDC /* Pods-WindyDemo2.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4XF5EH9S5;
+				INFOPLIST_FILE = WindyDemo2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ulife.windy.demo2.WindyDemo2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E468C8E227BCE432009B7993 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DE5B3F2081B1D54AB375BA0 /* Pods-WindyDemo2.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4XF5EH9S5;
+				INFOPLIST_FILE = WindyDemo2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ulife.windy.demo2.WindyDemo2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E468C8E427BCE432009B7993 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E66CF2751ABFEFEA5497226C /* Pods-WindyDemo2Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4XF5EH9S5;
+				INFOPLIST_FILE = WindyDemo2Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ulife.windy.demo2.WindyDemo2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WindyDemo2.app/WindyDemo2";
+			};
+			name = Debug;
+		};
+		E468C8E527BCE432009B7993 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E8448ADEC9B3AD4E794737 /* Pods-WindyDemo2Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4XF5EH9S5;
+				INFOPLIST_FILE = WindyDemo2Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ulife.windy.demo2.WindyDemo2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WindyDemo2.app/WindyDemo2";
+			};
+			name = Release;
+		};
+		E468C8E727BCE432009B7993 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C66F7C615C90832D5DBAA1D8 /* Pods-WindyDemo2-WindyDemo2UITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4XF5EH9S5;
+				INFOPLIST_FILE = WindyDemo2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ulife.windy.demo2.WindyDemo2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WindyDemo2;
+			};
+			name = Debug;
+		};
+		E468C8E827BCE432009B7993 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BB4499E0BC73F071C0803D1 /* Pods-WindyDemo2-WindyDemo2UITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4XF5EH9S5;
+				INFOPLIST_FILE = WindyDemo2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ulife.windy.demo2.WindyDemo2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WindyDemo2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E468C8B127BCE42D009B7993 /* Build configuration list for PBXProject "WindyDemo2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E468C8DE27BCE432009B7993 /* Debug */,
+				E468C8DF27BCE432009B7993 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E468C8E027BCE432009B7993 /* Build configuration list for PBXNativeTarget "WindyDemo2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E468C8E127BCE432009B7993 /* Debug */,
+				E468C8E227BCE432009B7993 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E468C8E327BCE432009B7993 /* Build configuration list for PBXNativeTarget "WindyDemo2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E468C8E427BCE432009B7993 /* Debug */,
+				E468C8E527BCE432009B7993 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E468C8E627BCE432009B7993 /* Build configuration list for PBXNativeTarget "WindyDemo2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E468C8E727BCE432009B7993 /* Debug */,
+				E468C8E827BCE432009B7993 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E468C8AE27BCE42D009B7993 /* Project object */;
+}
