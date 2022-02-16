@@ -27,7 +27,15 @@ extension WindyHomePagePresenter: WindyHomePageViewOutput {
     
     func doPullToRefresh() {
         doGetCurrentLocationData()
-        
+    }
+    
+    func doSelectLocation() {
+        wireFrame?.doOpenSelectLocationScreen()
+    }
+    
+    func doRemoveLocationFromFavoriteList(_ location: LocationModel) {
+        viewModel?.doRemoveFavorite(location)
+        view?.doReloadView()
     }
 }
 
@@ -49,13 +57,12 @@ extension WindyHomePagePresenter {
 extension WindyHomePagePresenter: WindyHomePageInteractorOutput {
     func didGetForecastWeatherData(key: String, data: ForecastWeatherDataModel) {
         viewModel?.doUpdateForecaseWeatherData(key: key, data: data)
-        viewModel?.doUpdateLastTime()
         view?.doReloadView()
         DLog("didGetForecastWeatherData \(key)")
     }
     
     func didCurrentLocationWeatherData(data: LocationWeatherDataModel) {
-        viewModel?.didUpdateCurrentLocationWeatherData(data: data)
+        viewModel?.doUpdateCurrentLocationWeatherData(data: data)
         view?.doReloadView()
         DLog("didCurrentLocationWeatherData \(data.name)")
     }
@@ -68,5 +75,9 @@ extension WindyHomePagePresenter: WindyHomePageInteractorOutput {
 // MARK:
 // MARK: WIRE FRAME
 extension WindyHomePagePresenter: WindyHomePageWireFrameOutput {
-    
+    func didSelectLocation(_ location: LocationModel) {
+        viewModel?.doAddFavorite(location)
+        view?.doReloadView()
+        interactor?.doGetForecastWeatherData(key: location.id, location.lat, location.long)
+    }
 }

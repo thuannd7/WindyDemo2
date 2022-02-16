@@ -32,8 +32,6 @@
 		E468C98827BCF313009B7993 /* HomeLocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E468C98027BCF313009B7993 /* HomeLocationTableViewCell.xib */; };
 		E468C98927BCF313009B7993 /* HomeCurrenLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C98127BCF313009B7993 /* HomeCurrenLocationTableViewCell.swift */; };
 		E468C98A27BCF313009B7993 /* HomeCurrenLocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E468C98227BCF313009B7993 /* HomeCurrenLocationTableViewCell.xib */; };
-		E468C98B27BCF313009B7993 /* HomeAddLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C98327BCF313009B7993 /* HomeAddLocationTableViewCell.swift */; };
-		E468C98C27BCF313009B7993 /* HomeAddLocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E468C98427BCF313009B7993 /* HomeAddLocationTableViewCell.xib */; };
 		E468C98D27BCF313009B7993 /* HomeLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C98527BCF313009B7993 /* HomeLocationTableViewCell.swift */; };
 		E468C98E27BCF313009B7993 /* NoDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E468C98627BCF313009B7993 /* NoDataTableViewCell.xib */; };
 		E468C99127BCF5B5009B7993 /* lang-en.json in Resources */ = {isa = PBXBuildFile; fileRef = E468C99027BCF5B5009B7993 /* lang-en.json */; };
@@ -63,6 +61,10 @@
 		E468C9D027BD0C29009B7993 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9CF27BD0C29009B7993 /* LocationHelper.swift */; };
 		E468C9D327BD0E50009B7993 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9D227BD0E50009B7993 /* DataManager.swift */; };
 		E468C9D527BD0E70009B7993 /* LocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9D427BD0E70009B7993 /* LocationDataManager.swift */; };
+		E468C9DD27BD3DA3009B7993 /* SelectLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9D827BD3DA3009B7993 /* SelectLocationViewController.swift */; };
+		E468C9DE27BD3DA3009B7993 /* LocationResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9DA27BD3DA3009B7993 /* LocationResultTableViewCell.swift */; };
+		E468C9DF27BD3DA3009B7993 /* LocationResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E468C9DB27BD3DA3009B7993 /* LocationResultTableViewCell.xib */; };
+		E468C9E027BD3DA3009B7993 /* SelectLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E468C9DC27BD3DA3009B7993 /* SelectLocationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,8 +121,6 @@
 		E468C98027BCF313009B7993 /* HomeLocationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeLocationTableViewCell.xib; sourceTree = "<group>"; };
 		E468C98127BCF313009B7993 /* HomeCurrenLocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCurrenLocationTableViewCell.swift; sourceTree = "<group>"; };
 		E468C98227BCF313009B7993 /* HomeCurrenLocationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCurrenLocationTableViewCell.xib; sourceTree = "<group>"; };
-		E468C98327BCF313009B7993 /* HomeAddLocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeAddLocationTableViewCell.swift; sourceTree = "<group>"; };
-		E468C98427BCF313009B7993 /* HomeAddLocationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeAddLocationTableViewCell.xib; sourceTree = "<group>"; };
 		E468C98527BCF313009B7993 /* HomeLocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLocationTableViewCell.swift; sourceTree = "<group>"; };
 		E468C98627BCF313009B7993 /* NoDataTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoDataTableViewCell.xib; sourceTree = "<group>"; };
 		E468C99027BCF5B5009B7993 /* lang-en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lang-en.json"; sourceTree = "<group>"; };
@@ -150,6 +150,10 @@
 		E468C9CF27BD0C29009B7993 /* LocationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
 		E468C9D227BD0E50009B7993 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		E468C9D427BD0E70009B7993 /* LocationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
+		E468C9D827BD3DA3009B7993 /* SelectLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectLocationViewController.swift; sourceTree = "<group>"; };
+		E468C9DA27BD3DA3009B7993 /* LocationResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationResultTableViewCell.swift; sourceTree = "<group>"; };
+		E468C9DB27BD3DA3009B7993 /* LocationResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationResultTableViewCell.xib; sourceTree = "<group>"; };
+		E468C9DC27BD3DA3009B7993 /* SelectLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectLocationViewController.xib; sourceTree = "<group>"; };
 		E66CF2751ABFEFEA5497226C /* Pods-WindyDemo2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindyDemo2Tests.debug.xcconfig"; path = "Target Support Files/Pods-WindyDemo2Tests/Pods-WindyDemo2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -268,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				E468C90327BCEB13009B7993 /* WindyHomePage */,
+				E468C9D627BD3B3B009B7993 /* Other */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -399,8 +404,6 @@
 		E468C97E27BCF2E5009B7993 /* cell */ = {
 			isa = PBXGroup;
 			children = (
-				E468C98327BCF313009B7993 /* HomeAddLocationTableViewCell.swift */,
-				E468C98427BCF313009B7993 /* HomeAddLocationTableViewCell.xib */,
 				E468C98127BCF313009B7993 /* HomeCurrenLocationTableViewCell.swift */,
 				E468C98227BCF313009B7993 /* HomeCurrenLocationTableViewCell.xib */,
 				E468C98527BCF313009B7993 /* HomeLocationTableViewCell.swift */,
@@ -535,6 +538,33 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		E468C9D627BD3B3B009B7993 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				E468C9D727BD3B43009B7993 /* SelectLocation */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		E468C9D727BD3B43009B7993 /* SelectLocation */ = {
+			isa = PBXGroup;
+			children = (
+				E468C9D827BD3DA3009B7993 /* SelectLocationViewController.swift */,
+				E468C9DC27BD3DA3009B7993 /* SelectLocationViewController.xib */,
+				E468C9D927BD3DA3009B7993 /* cell */,
+			);
+			path = SelectLocation;
+			sourceTree = "<group>";
+		};
+		E468C9D927BD3DA3009B7993 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				E468C9DA27BD3DA3009B7993 /* LocationResultTableViewCell.swift */,
+				E468C9DB27BD3DA3009B7993 /* LocationResultTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -645,13 +675,14 @@
 			files = (
 				E468C8C627BCE432009B7993 /* LaunchScreen.storyboard in Resources */,
 				E468C98827BCF313009B7993 /* HomeLocationTableViewCell.xib in Resources */,
+				E468C9DF27BD3DA3009B7993 /* LocationResultTableViewCell.xib in Resources */,
 				E468C98E27BCF313009B7993 /* NoDataTableViewCell.xib in Resources */,
 				E468C98A27BCF313009B7993 /* HomeCurrenLocationTableViewCell.xib in Resources */,
 				E468C8F627BCE6E8009B7993 /* city.list.json in Resources */,
 				E468C97927BCF035009B7993 /* WindyHomePageView.xib in Resources */,
 				E468C99127BCF5B5009B7993 /* lang-en.json in Resources */,
 				E468C8C327BCE432009B7993 /* Assets.xcassets in Resources */,
-				E468C98C27BCF313009B7993 /* HomeAddLocationTableViewCell.xib in Resources */,
+				E468C9E027BD3DA3009B7993 /* SelectLocationViewController.xib in Resources */,
 				E468C8C127BCE42D009B7993 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -787,6 +818,7 @@
 				E468C9A427BCFC7F009B7993 /* APIBaseRequestService.swift in Sources */,
 				E468C97A27BCF035009B7993 /* WindyHomePageView.swift in Sources */,
 				E468C91927BCEB5E009B7993 /* UIViewControllerExtension.swift in Sources */,
+				E468C9DE27BD3DA3009B7993 /* LocationResultTableViewCell.swift in Sources */,
 				E468C9D527BD0E70009B7993 /* LocationDataManager.swift in Sources */,
 				E468C99527BCF851009B7993 /* AppMacro.swift in Sources */,
 				E468C99927BCF9D5009B7993 /* UIColorExtensions.swift in Sources */,
@@ -799,8 +831,8 @@
 				E468C9B527BCFD30009B7993 /* WeatherInfor.swift in Sources */,
 				E468C9B827BCFD30009B7993 /* ForecastWeatherDataModel.swift in Sources */,
 				E468C97427BCF035009B7993 /* WindyHomePageViewModel.swift in Sources */,
-				E468C98B27BCF313009B7993 /* HomeAddLocationTableViewCell.swift in Sources */,
 				E468C9B727BCFD30009B7993 /* ForecaseInfor.swift in Sources */,
+				E468C9DD27BD3DA3009B7993 /* SelectLocationViewController.swift in Sources */,
 				E468C9B927BCFD30009B7993 /* LocationModel.swift in Sources */,
 				E468C98D27BCF313009B7993 /* HomeLocationTableViewCell.swift in Sources */,
 				E468C9A627BCFC7F009B7993 /* JSONExtension.swift in Sources */,

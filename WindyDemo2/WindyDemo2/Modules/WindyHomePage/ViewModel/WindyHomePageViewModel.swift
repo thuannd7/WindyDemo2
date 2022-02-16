@@ -14,10 +14,6 @@ class WindyHomePageViewModel: NSObject
 }
 
 extension WindyHomePageViewModel: WindyHomePageViewModelInput {
-    func doUpdateLastTime() {
-        lastTimeUpdate = Date()
-    }
-    
     func doUpdateForecaseWeatherData(key: String, data: ForecastWeatherDataModel?) {
         guard let data = data else {
             mapForecastWeatherData[key] = nil
@@ -25,10 +21,39 @@ extension WindyHomePageViewModel: WindyHomePageViewModelInput {
         }
         
         mapForecastWeatherData[key] = data
+        lastTimeUpdate = Date()
     }
     
-    func didUpdateCurrentLocationWeatherData(data: LocationWeatherDataModel) {
+    func doAddFavorite(_ location: LocationModel) {
+        let result = listFavorite.filter { (item: LocationModel) in
+            return item.id == location.id
+        }
+        
+        if result.isEmpty {
+            listFavorite.append(location)
+        }
+    }
+    
+    func doRemoveFavorite(_ location: LocationModel) {
+        listFavorite.removeAll { (item: LocationModel) in
+            return item.id == location.id
+        }
+    }
+    
+    func doUpdateCurrentLocationWeatherData(data: LocationWeatherDataModel) {
         currentLocationWeatherData = data
+        lastTimeUpdate = Date()
+    }
+    
+    func getLocation(index: Int) -> LocationModel? {
+        return listFavorite.count > index ? listFavorite[index] : nil
+    }
+    
+    func getLocationForecastData(index: Int) -> ForecastWeatherDataModel? {
+        guard let location = getLocation(index: index) else {
+            return nil
+        }
+        return mapForecastWeatherData[location.id]
     }
 }
 
@@ -38,7 +63,10 @@ extension WindyHomePageViewModel: WindyHomePageViewModelOutput {
     }
     
     func getLastTimeStr() -> String? {
-        return lastTimeUpdate.toStringWithFormat("HH:mm - dd MMM, YYYY")
+        if lastTimeUpdate.isInToday {
+            return "Updated".localized + ": " + "Today at".localized + " " + lastTimeUpdate.toStringWithFormat("HH:mm:ss")
+        }
+        return "Updated".localized + ": " + lastTimeUpdate.toStringWithFormat("HH:mm:ss - dd MMM, YYYY")
     }
     
     func getListLocationCount() -> Int {

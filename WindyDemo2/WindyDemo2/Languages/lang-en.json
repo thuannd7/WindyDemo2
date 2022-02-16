@@ -1,4 +1,5 @@
 {
+    "Windy Demo" = "Windy Demo",
     "Cancel": "Cancel",
     "Remove": "Remove",
     "Do you want remove from favorite list?": "Do you want remove from favorite list?",
@@ -14,5 +15,12 @@
     "Dew point": "Dew point",
     "UV index": "UV index",
     "Location service not enable": "Location service not enable",
-    "Change setting": "Change setting", 
+    "Change setting": "Change setting",
+    "Enter city name to search": "Enter city name to search",
+    "Search": "Search",
+    "Add location to your favorite list": "Add location to your favorite list",
+    "Add location": "Add location",
+    "Updated": "Updated",
+    "Today at": "Today at",
+    "No search result": "No search result"
 }

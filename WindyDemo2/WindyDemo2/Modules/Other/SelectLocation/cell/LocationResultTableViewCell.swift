@@ -1,5 +1,5 @@
 //
-//  HomeAddLocationTableViewCell.swift
+//  LocationResultTableViewCell.swift
 //  WindyDemo2
 //
 //  Created by Thuan Nguyen on 16/02/2022.
@@ -7,8 +7,10 @@
 
 import UIKit
 
-class HomeAddLocationTableViewCell: UITableViewCell {
+class LocationResultTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lblTitle: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

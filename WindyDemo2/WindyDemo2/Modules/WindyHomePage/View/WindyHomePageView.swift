@@ -32,6 +32,7 @@ class WindyHomePageView: BaseViewController
     // MARK:
     // MARK:  IBACTIONS
     @IBAction func btnAddPressed(_ sender: Any) {
+        presenter?.doSelectLocation()
     }
     
     // MARK:
@@ -72,6 +73,9 @@ extension WindyHomePageView: UITableViewDataSource, UITableViewDelegate {
         }
         
         let cell = HomeLocationTableViewCell.dequeCellWithTable(tableView)
+        let location = viewModel.getLocation(index: indexPath.row)
+        let forecastData = viewModel.getLocationForecastData(index: indexPath.row)
+        cell.billData(location, forecastData)
         cell.delegate = self
         return cell
     }
@@ -113,16 +117,15 @@ extension WindyHomePageView: MGSwipeTableCellDelegate {
     }
     
     func doRemoveFavorite(_ indexPath: IndexPath) {
-        let locationName = "Test"
-        weak var weakSelf = self
-        
-        let alert = UIAlertController(title: "Remove".localized + " \(locationName)",
+        guard let location = viewModel.getLocation(index: indexPath.row) else {
+            return
+        }
+ 
+        let alert = UIAlertController(title: "Remove".localized + " \(location.name)",
                                       message: "Do you want remove from favorite list?".localized,
                                       preferredStyle: .alert)
-        let actionRemove = UIAlertAction(title: "Remove".localized, style: .destructive) { _ in
-            if let strong = weakSelf {
-                strong.tbvMain?.reloadData()
-            }
+        let actionRemove = UIAlertAction(title: "Remove".localized, style: .destructive) { [weak self] _ in
+            self?.presenter?.doRemoveLocationFromFavoriteList(location)
         }
         
         let actionCancel = UIAlertAction(title: "Cancel".localized, style: .cancel, handler: nil)

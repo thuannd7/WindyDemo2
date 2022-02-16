@@ -5,7 +5,6 @@
 import UIKit
 
 class WindyHomePageConfigure: NSObject {
-
     class func viewController() -> WindyHomePageView {
         let view = WindyHomePageView.initWithDefaultNib()
         let presenter = WindyHomePagePresenter()
@@ -22,6 +21,7 @@ class WindyHomePageConfigure: NSObject {
         view.viewModel = viewModel
         interactor.presenter = presenter
         wireFrame.presenter = presenter
+        wireFrame.viewController = view
         return view
     }
 }
@@ -39,6 +39,8 @@ protocol WindyHomePageViewOutput: NSObjectProtocol {
     func viewDidLoad()
     func viewDidAppear()
     func doPullToRefresh()
+    func doSelectLocation()
+    func doRemoveLocationFromFavoriteList(_ location: LocationModel)
 }
 
 //========================= VIEW MODEL =================
@@ -46,9 +48,10 @@ protocol WindyHomePageViewOutput: NSObjectProtocol {
 // MARK: 
 // MARK: VIEW MODEL
 protocol WindyHomePageViewModelInput: NSObjectProtocol {
-    func doUpdateLastTime()
     func doUpdateForecaseWeatherData(key: String, data: ForecastWeatherDataModel?)
-    func didUpdateCurrentLocationWeatherData(data: LocationWeatherDataModel)
+    func doUpdateCurrentLocationWeatherData(data: LocationWeatherDataModel)
+    func doAddFavorite(_ location: LocationModel)
+    func doRemoveFavorite(_ location: LocationModel)
 }
 
 protocol WindyHomePageViewModelOutput: NSObjectProtocol {
@@ -58,6 +61,8 @@ protocol WindyHomePageViewModelOutput: NSObjectProtocol {
     func getCurrentLocationWeatherData() -> LocationWeatherDataModel?
     func getCurrentLocationForecastWeatherData() -> ForecastWeatherDataModel?
     func getWeatherData(location: LocationModel) -> LocationWeatherDataModel?
+    func getLocation(index: Int) -> LocationModel?
+    func getLocationForecastData(index: Int) -> ForecastWeatherDataModel?
 }
 
 //========================= INTERACTOR =================
@@ -80,9 +85,9 @@ protocol WindyHomePageInteractorOutput: NSObjectProtocol {
 // MARK:
 // MARK: INTERACTOR
 protocol WindyHomePageWireFrameInput: NSObjectProtocol {
-
+    func doOpenSelectLocationScreen()
 }
 
 protocol WindyHomePageWireFrameOutput: NSObjectProtocol {
-
+    func didSelectLocation(_ location: LocationModel)
 }
