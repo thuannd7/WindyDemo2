@@ -1,3 +1,6 @@
 {
-    "_login" : "Sign in",
+    "Cancel": "Cancel",
+    "Remove": "Remove",
+    "Do you want remove from favorite list?": "Do you want remove from favorite list?",
+    "No Permission": "No Permission",
 }

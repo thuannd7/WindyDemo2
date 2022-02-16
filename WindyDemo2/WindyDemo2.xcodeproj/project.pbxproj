@@ -39,6 +39,24 @@
 		E468C99127BCF5B5009B7993 /* lang-en.json in Resources */ = {isa = PBXBuildFile; fileRef = E468C99027BCF5B5009B7993 /* lang-en.json */; };
 		E468C99327BCF611009B7993 /* LocalizationStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C99227BCF611009B7993 /* LocalizationStringHelper.swift */; };
 		E468C99527BCF851009B7993 /* AppMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C99427BCF850009B7993 /* AppMacro.swift */; };
+		E468C99727BCF9A7009B7993 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C99627BCF9A7009B7993 /* AppColor.swift */; };
+		E468C99927BCF9D5009B7993 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C99827BCF9D5009B7993 /* UIColorExtensions.swift */; };
+		E468C9A327BCFC7F009B7993 /* APIRequestDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C99E27BCFC7F009B7993 /* APIRequestDataProvider.swift */; };
+		E468C9A427BCFC7F009B7993 /* APIBaseRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C99F27BCFC7F009B7993 /* APIBaseRequestService.swift */; };
+		E468C9A527BCFC7F009B7993 /* APIListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9A027BCFC7F009B7993 /* APIListener.swift */; };
+		E468C9A627BCFC7F009B7993 /* JSONExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9A127BCFC7F009B7993 /* JSONExtension.swift */; };
+		E468C9A727BCFC7F009B7993 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9A227BCFC7F009B7993 /* WeatherService.swift */; };
+		E468C9B327BCFD30009B7993 /* SysInfor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9AA27BCFD2F009B7993 /* SysInfor.swift */; };
+		E468C9B527BCFD30009B7993 /* WeatherInfor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9AC27BCFD2F009B7993 /* WeatherInfor.swift */; };
+		E468C9B627BCFD30009B7993 /* WindInfor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9AD27BCFD2F009B7993 /* WindInfor.swift */; };
+		E468C9B727BCFD30009B7993 /* ForecaseInfor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9AE27BCFD2F009B7993 /* ForecaseInfor.swift */; };
+		E468C9B827BCFD30009B7993 /* ForecastWeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9AF27BCFD2F009B7993 /* ForecastWeatherDataModel.swift */; };
+		E468C9B927BCFD30009B7993 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9B027BCFD2F009B7993 /* LocationModel.swift */; };
+		E468C9BA27BCFD30009B7993 /* TempInfor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9B127BCFD2F009B7993 /* TempInfor.swift */; };
+		E468C9BB27BCFD30009B7993 /* LocationWeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9B227BCFD30009B7993 /* LocationWeatherDataModel.swift */; };
+		E468C9BE27BCFDA0009B7993 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9BD27BCFDA0009B7993 /* DictionaryExtension.swift */; };
+		E468C9C127BCFDC1009B7993 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9C027BCFDC0009B7993 /* StringExtension.swift */; };
+		E468C9C327BCFDE4009B7993 /* StringRemoveVietnameseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9C227BCFDE4009B7993 /* StringRemoveVietnameseExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +120,24 @@
 		E468C99027BCF5B5009B7993 /* lang-en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lang-en.json"; sourceTree = "<group>"; };
 		E468C99227BCF611009B7993 /* LocalizationStringHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationStringHelper.swift; sourceTree = "<group>"; };
 		E468C99427BCF850009B7993 /* AppMacro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMacro.swift; sourceTree = "<group>"; };
+		E468C99627BCF9A7009B7993 /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		E468C99827BCF9D5009B7993 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		E468C99E27BCFC7F009B7993 /* APIRequestDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestDataProvider.swift; sourceTree = "<group>"; };
+		E468C99F27BCFC7F009B7993 /* APIBaseRequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIBaseRequestService.swift; sourceTree = "<group>"; };
+		E468C9A027BCFC7F009B7993 /* APIListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIListener.swift; sourceTree = "<group>"; };
+		E468C9A127BCFC7F009B7993 /* JSONExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONExtension.swift; sourceTree = "<group>"; };
+		E468C9A227BCFC7F009B7993 /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		E468C9AA27BCFD2F009B7993 /* SysInfor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SysInfor.swift; sourceTree = "<group>"; };
+		E468C9AC27BCFD2F009B7993 /* WeatherInfor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherInfor.swift; sourceTree = "<group>"; };
+		E468C9AD27BCFD2F009B7993 /* WindInfor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindInfor.swift; sourceTree = "<group>"; };
+		E468C9AE27BCFD2F009B7993 /* ForecaseInfor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecaseInfor.swift; sourceTree = "<group>"; };
+		E468C9AF27BCFD2F009B7993 /* ForecastWeatherDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastWeatherDataModel.swift; sourceTree = "<group>"; };
+		E468C9B027BCFD2F009B7993 /* LocationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		E468C9B127BCFD2F009B7993 /* TempInfor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempInfor.swift; sourceTree = "<group>"; };
+		E468C9B227BCFD30009B7993 /* LocationWeatherDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationWeatherDataModel.swift; sourceTree = "<group>"; };
+		E468C9BD27BCFDA0009B7993 /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		E468C9C027BCFDC0009B7993 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		E468C9C227BCFDE4009B7993 /* StringRemoveVietnameseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringRemoveVietnameseExtension.swift; sourceTree = "<group>"; };
 		E66CF2751ABFEFEA5497226C /* Pods-WindyDemo2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindyDemo2Tests.debug.xcconfig"; path = "Target Support Files/Pods-WindyDemo2Tests/Pods-WindyDemo2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -226,8 +262,9 @@
 		E468C8EF27BCE692009B7993 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				E468C99427BCF850009B7993 /* AppMacro.swift */,
 				E468C93027BCEBFB009B7993 /* BaseViewController.swift */,
+				E468C99427BCF850009B7993 /* AppMacro.swift */,
+				E468C99627BCF9A7009B7993 /* AppColor.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -235,6 +272,7 @@
 		E468C8F027BCE69F009B7993 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E468C9A927BCFD1E009B7993 /* BusinessModels */,
 				E468C97B27BCF23C009B7993 /* Services */,
 			);
 			path = Models;
@@ -243,8 +281,12 @@
 		E468C8F127BCE6A3009B7993 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				E468C91827BCEB5E009B7993 /* UIViewControllerExtension.swift */,
-				E468C97C27BCF2C1009B7993 /* UITableViewCellExtension.swift */,
+				E468C9BF27BCFDB2009B7993 /* String */,
+				E468C9BC27BCFD8F009B7993 /* NSDictionary */,
+				E468C9A827BCFCC9009B7993 /* JSON */,
+				E468C99C27BCF9EA009B7993 /* UITableViewCell */,
+				E468C99B27BCF9E0009B7993 /* UIViewController */,
+				E468C99A27BCF9D7009B7993 /* UIColor */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -331,6 +373,8 @@
 		E468C97B27BCF23C009B7993 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E468C99D27BCFC7F009B7993 /* BaseService */,
+				E468C9A227BCFC7F009B7993 /* WeatherService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -357,6 +401,80 @@
 				E468C99227BCF611009B7993 /* LocalizationStringHelper.swift */,
 			);
 			path = Languages;
+			sourceTree = "<group>";
+		};
+		E468C99A27BCF9D7009B7993 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				E468C99827BCF9D5009B7993 /* UIColorExtensions.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		E468C99B27BCF9E0009B7993 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E468C91827BCEB5E009B7993 /* UIViewControllerExtension.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		E468C99C27BCF9EA009B7993 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E468C97C27BCF2C1009B7993 /* UITableViewCellExtension.swift */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		E468C99D27BCFC7F009B7993 /* BaseService */ = {
+			isa = PBXGroup;
+			children = (
+				E468C99E27BCFC7F009B7993 /* APIRequestDataProvider.swift */,
+				E468C99F27BCFC7F009B7993 /* APIBaseRequestService.swift */,
+				E468C9A027BCFC7F009B7993 /* APIListener.swift */,
+			);
+			path = BaseService;
+			sourceTree = "<group>";
+		};
+		E468C9A827BCFCC9009B7993 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				E468C9A127BCFC7F009B7993 /* JSONExtension.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		E468C9A927BCFD1E009B7993 /* BusinessModels */ = {
+			isa = PBXGroup;
+			children = (
+				E468C9AE27BCFD2F009B7993 /* ForecaseInfor.swift */,
+				E468C9AF27BCFD2F009B7993 /* ForecastWeatherDataModel.swift */,
+				E468C9B027BCFD2F009B7993 /* LocationModel.swift */,
+				E468C9B227BCFD30009B7993 /* LocationWeatherDataModel.swift */,
+				E468C9AA27BCFD2F009B7993 /* SysInfor.swift */,
+				E468C9B127BCFD2F009B7993 /* TempInfor.swift */,
+				E468C9AC27BCFD2F009B7993 /* WeatherInfor.swift */,
+				E468C9AD27BCFD2F009B7993 /* WindInfor.swift */,
+			);
+			path = BusinessModels;
+			sourceTree = "<group>";
+		};
+		E468C9BC27BCFD8F009B7993 /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				E468C9BD27BCFDA0009B7993 /* DictionaryExtension.swift */,
+			);
+			path = NSDictionary;
+			sourceTree = "<group>";
+		};
+		E468C9BF27BCFDB2009B7993 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				E468C9C227BCFDE4009B7993 /* StringRemoveVietnameseExtension.swift */,
+				E468C9C027BCFDC0009B7993 /* StringExtension.swift */,
+			);
+			path = String;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -607,20 +725,38 @@
 				E468C97827BCF035009B7993 /* WindyHomePageWireFrame.swift in Sources */,
 				E468C98927BCF313009B7993 /* HomeCurrenLocationTableViewCell.swift in Sources */,
 				E468C97627BCF035009B7993 /* WindyHomePagePresenter.swift in Sources */,
+				E468C9A427BCFC7F009B7993 /* APIBaseRequestService.swift in Sources */,
 				E468C97A27BCF035009B7993 /* WindyHomePageView.swift in Sources */,
 				E468C91927BCEB5E009B7993 /* UIViewControllerExtension.swift in Sources */,
 				E468C99527BCF851009B7993 /* AppMacro.swift in Sources */,
+				E468C99927BCF9D5009B7993 /* UIColorExtensions.swift in Sources */,
+				E468C9C127BCFDC1009B7993 /* StringExtension.swift in Sources */,
 				E468C97727BCF035009B7993 /* WindyHomePageInteractor.swift in Sources */,
 				E468C8BE27BCE42D009B7993 /* ViewController.swift in Sources */,
+				E468C9B627BCFD30009B7993 /* WindInfor.swift in Sources */,
 				E468C98727BCF313009B7993 /* NoDataTableViewCell.swift in Sources */,
+				E468C9B527BCFD30009B7993 /* WeatherInfor.swift in Sources */,
+				E468C9B827BCFD30009B7993 /* ForecastWeatherDataModel.swift in Sources */,
 				E468C97427BCF035009B7993 /* WindyHomePageViewModel.swift in Sources */,
 				E468C98B27BCF313009B7993 /* HomeAddLocationTableViewCell.swift in Sources */,
+				E468C9B727BCFD30009B7993 /* ForecaseInfor.swift in Sources */,
+				E468C9B927BCFD30009B7993 /* LocationModel.swift in Sources */,
 				E468C98D27BCF313009B7993 /* HomeLocationTableViewCell.swift in Sources */,
+				E468C9A627BCFC7F009B7993 /* JSONExtension.swift in Sources */,
 				E468C97527BCF035009B7993 /* WindyHomePageConfigure.swift in Sources */,
+				E468C9C327BCFDE4009B7993 /* StringRemoveVietnameseExtension.swift in Sources */,
+				E468C9B327BCFD30009B7993 /* SysInfor.swift in Sources */,
+				E468C9A727BCFC7F009B7993 /* WeatherService.swift in Sources */,
 				E468C8BA27BCE42D009B7993 /* AppDelegate.swift in Sources */,
+				E468C9A527BCFC7F009B7993 /* APIListener.swift in Sources */,
 				E468C93127BCEBFB009B7993 /* BaseViewController.swift in Sources */,
 				E468C99327BCF611009B7993 /* LocalizationStringHelper.swift in Sources */,
+				E468C9BE27BCFDA0009B7993 /* DictionaryExtension.swift in Sources */,
 				E468C97D27BCF2C2009B7993 /* UITableViewCellExtension.swift in Sources */,
+				E468C99727BCF9A7009B7993 /* AppColor.swift in Sources */,
+				E468C9BA27BCFD30009B7993 /* TempInfor.swift in Sources */,
+				E468C9A327BCFC7F009B7993 /* APIRequestDataProvider.swift in Sources */,
+				E468C9BB27BCFD30009B7993 /* LocationWeatherDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

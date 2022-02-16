@@ -27,6 +27,10 @@
                     <rect key="frame" x="0.0" y="94" width="414" height="768"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="bIz-22-VWm"/>
+                        <outlet property="delegate" destination="-1" id="NHi-02-33W"/>
+                    </connections>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CpG-OZ-tlG">
                     <rect key="frame" x="0.0" y="44" width="414" height="50"/>
@@ -87,6 +91,9 @@
                             <real key="value" value="22"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="btnAddPressed:" destination="-1" eventType="touchUpInside" id="cee-cT-Fxg"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Gzi-t3-xhA"/>
