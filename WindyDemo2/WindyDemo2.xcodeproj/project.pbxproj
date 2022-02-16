@@ -15,7 +15,6 @@
 		E468C8C127BCE42D009B7993 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E468C8BF27BCE42D009B7993 /* Main.storyboard */; };
 		E468C8C327BCE432009B7993 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E468C8C227BCE432009B7993 /* Assets.xcassets */; };
 		E468C8C627BCE432009B7993 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E468C8C427BCE432009B7993 /* LaunchScreen.storyboard */; };
-		E468C8D127BCE432009B7993 /* WindyDemo2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C8D027BCE432009B7993 /* WindyDemo2Tests.swift */; };
 		E468C8DC27BCE432009B7993 /* WindyDemo2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C8DB27BCE432009B7993 /* WindyDemo2UITests.swift */; };
 		E468C8F627BCE6E8009B7993 /* city.list.json in Resources */ = {isa = PBXBuildFile; fileRef = E468C8F527BCE6E8009B7993 /* city.list.json */; };
 		E468C91927BCEB5E009B7993 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C91827BCEB5E009B7993 /* UIViewControllerExtension.swift */; };
@@ -73,6 +72,8 @@
 		E468CA0027BD6838009B7993 /* LocationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9F827BD6838009B7993 /* LocationDetailViewModel.swift */; };
 		E468CA0127BD6838009B7993 /* LocationDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C9FA27BD6838009B7993 /* LocationDetailPresenter.swift */; };
 		E468CA0427BD70BD009B7993 /* map_windy.png in Resources */ = {isa = PBXBuildFile; fileRef = E468CA0327BD70BD009B7993 /* map_windy.png */; };
+		E468CA0827BD7546009B7993 /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468CA0727BD7546009B7993 /* APIServiceTests.swift */; };
+		E468CA0A27BD76B1009B7993 /* WindyDegTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468CA0927BD76B1009B7993 /* WindyDegTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,7 +110,6 @@
 		E468C8C527BCE432009B7993 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E468C8C727BCE432009B7993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E468C8CC27BCE432009B7993 /* WindyDemo2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WindyDemo2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E468C8D027BCE432009B7993 /* WindyDemo2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindyDemo2Tests.swift; sourceTree = "<group>"; };
 		E468C8D227BCE432009B7993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E468C8D727BCE432009B7993 /* WindyDemo2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WindyDemo2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E468C8DB27BCE432009B7993 /* WindyDemo2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindyDemo2UITests.swift; sourceTree = "<group>"; };
@@ -170,6 +170,8 @@
 		E468C9F827BD6838009B7993 /* LocationDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailViewModel.swift; sourceTree = "<group>"; };
 		E468C9FA27BD6838009B7993 /* LocationDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailPresenter.swift; sourceTree = "<group>"; };
 		E468CA0327BD70BD009B7993 /* map_windy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_windy.png; sourceTree = "<group>"; };
+		E468CA0727BD7546009B7993 /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
+		E468CA0927BD76B1009B7993 /* WindyDegTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindyDegTests.swift; sourceTree = "<group>"; };
 		E66CF2751ABFEFEA5497226C /* Pods-WindyDemo2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindyDemo2Tests.debug.xcconfig"; path = "Target Support Files/Pods-WindyDemo2Tests/Pods-WindyDemo2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -269,7 +271,8 @@
 		E468C8CF27BCE432009B7993 /* WindyDemo2Tests */ = {
 			isa = PBXGroup;
 			children = (
-				E468C8D027BCE432009B7993 /* WindyDemo2Tests.swift */,
+				E468CA0727BD7546009B7993 /* APIServiceTests.swift */,
+				E468CA0927BD76B1009B7993 /* WindyDegTests.swift */,
 				E468C8D227BCE432009B7993 /* Info.plist */,
 			);
 			path = WindyDemo2Tests;
@@ -956,7 +959,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E468C8D127BCE432009B7993 /* WindyDemo2Tests.swift in Sources */,
+				E468CA0827BD7546009B7993 /* APIServiceTests.swift in Sources */,
+				E468CA0A27BD76B1009B7993 /* WindyDegTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
