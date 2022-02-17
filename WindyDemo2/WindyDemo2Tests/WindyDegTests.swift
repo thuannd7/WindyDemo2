@@ -17,7 +17,7 @@ class WindyDegTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
+    
     func testWindDegSymbol() {
         doTestWindDegSymbol(0.0, 0.0, "N")
         doTestWindDegSymbol(0.0, 45.0, "NNE")

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6A1F8BE10F49A25E36AF6FE4 /* Pods_WindyDemo2_WindyDemo2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC72C5EBB2310E31B7F9120 /* Pods_WindyDemo2_WindyDemo2UITests.framework */; };
+		B066F49DB90146DEF1E9703D /* libPods-WindyDemo2UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE278DDAC2B6A8F3E8CE0902 /* libPods-WindyDemo2UITests.a */; };
 		BCF401185DA259368D1F0D4B /* Pods_WindyDemo2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C82DD5474762485767F769 /* Pods_WindyDemo2.framework */; };
-		DAA48EE5DB3ADCB00636D175 /* Pods_WindyDemo2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BAAA83EDC39ECEB61B77F49 /* Pods_WindyDemo2Tests.framework */; };
+		CAED3DB65A7ABAE583E4ED5D /* libPods-WindyDemo2Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D16EFCA4DF5BA4038967CE /* libPods-WindyDemo2Tests.a */; };
 		E468C8BA27BCE42D009B7993 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C8B927BCE42D009B7993 /* AppDelegate.swift */; };
 		E468C8BE27BCE42D009B7993 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468C8BD27BCE42D009B7993 /* ViewController.swift */; };
 		E468C8C127BCE42D009B7993 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E468C8BF27BCE42D009B7993 /* Main.storyboard */; };
@@ -74,6 +74,7 @@
 		E468CA0427BD70BD009B7993 /* map_windy.png in Resources */ = {isa = PBXBuildFile; fileRef = E468CA0327BD70BD009B7993 /* map_windy.png */; };
 		E468CA0827BD7546009B7993 /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468CA0727BD7546009B7993 /* APIServiceTests.swift */; };
 		E468CA0A27BD76B1009B7993 /* WindyDegTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468CA0927BD76B1009B7993 /* WindyDegTests.swift */; };
+		E468CA1427BE0763009B7993 /* UIViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468CA1327BE0763009B7993 /* UIViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,11 +98,13 @@
 		0DE5B3F2081B1D54AB375BA0 /* Pods-WindyDemo2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindyDemo2.release.xcconfig"; path = "Target Support Files/Pods-WindyDemo2/Pods-WindyDemo2.release.xcconfig"; sourceTree = "<group>"; };
 		14E8448ADEC9B3AD4E794737 /* Pods-WindyDemo2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindyDemo2Tests.release.xcconfig"; path = "Target Support Files/Pods-WindyDemo2Tests/Pods-WindyDemo2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1BB4499E0BC73F071C0803D1 /* Pods-WindyDemo2-WindyDemo2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindyDemo2-WindyDemo2UITests.release.xcconfig"; path = "Target Support Files/Pods-WindyDemo2-WindyDemo2UITests/Pods-WindyDemo2-WindyDemo2UITests.release.xcconfig"; sourceTree = "<group>"; };
+		30D16EFCA4DF5BA4038967CE /* libPods-WindyDemo2Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WindyDemo2Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		345640BA1CF27AD80B28047D /* Pods-WindyDemo2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindyDemo2UITests.release.xcconfig"; path = "Target Support Files/Pods-WindyDemo2UITests/Pods-WindyDemo2UITests.release.xcconfig"; sourceTree = "<group>"; };
 		5327A0610E0D08E31CF36BDC /* Pods-WindyDemo2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindyDemo2.debug.xcconfig"; path = "Target Support Files/Pods-WindyDemo2/Pods-WindyDemo2.debug.xcconfig"; sourceTree = "<group>"; };
-		9BAAA83EDC39ECEB61B77F49 /* Pods_WindyDemo2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WindyDemo2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C82DD5474762485767F769 /* Pods_WindyDemo2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WindyDemo2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDE722E988C2C76BDC9E91D2 /* Pods-WindyDemo2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindyDemo2UITests.debug.xcconfig"; path = "Target Support Files/Pods-WindyDemo2UITests/Pods-WindyDemo2UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BE278DDAC2B6A8F3E8CE0902 /* libPods-WindyDemo2UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WindyDemo2UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C66F7C615C90832D5DBAA1D8 /* Pods-WindyDemo2-WindyDemo2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindyDemo2-WindyDemo2UITests.debug.xcconfig"; path = "Target Support Files/Pods-WindyDemo2-WindyDemo2UITests/Pods-WindyDemo2-WindyDemo2UITests.debug.xcconfig"; sourceTree = "<group>"; };
-		DAC72C5EBB2310E31B7F9120 /* Pods_WindyDemo2_WindyDemo2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WindyDemo2_WindyDemo2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E468C8B627BCE42D009B7993 /* WindyDemo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WindyDemo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E468C8B927BCE42D009B7993 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E468C8BD27BCE42D009B7993 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +175,7 @@
 		E468CA0327BD70BD009B7993 /* map_windy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_windy.png; sourceTree = "<group>"; };
 		E468CA0727BD7546009B7993 /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
 		E468CA0927BD76B1009B7993 /* WindyDegTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindyDegTests.swift; sourceTree = "<group>"; };
+		E468CA1327BE0763009B7993 /* UIViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerTests.swift; sourceTree = "<group>"; };
 		E66CF2751ABFEFEA5497226C /* Pods-WindyDemo2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WindyDemo2Tests.debug.xcconfig"; path = "Target Support Files/Pods-WindyDemo2Tests/Pods-WindyDemo2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,7 +192,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAA48EE5DB3ADCB00636D175 /* Pods_WindyDemo2Tests.framework in Frameworks */,
+				CAED3DB65A7ABAE583E4ED5D /* libPods-WindyDemo2Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +200,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A1F8BE10F49A25E36AF6FE4 /* Pods_WindyDemo2_WindyDemo2UITests.framework in Frameworks */,
+				B066F49DB90146DEF1E9703D /* libPods-WindyDemo2UITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,8 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				A0C82DD5474762485767F769 /* Pods_WindyDemo2.framework */,
-				DAC72C5EBB2310E31B7F9120 /* Pods_WindyDemo2_WindyDemo2UITests.framework */,
-				9BAAA83EDC39ECEB61B77F49 /* Pods_WindyDemo2Tests.framework */,
+				30D16EFCA4DF5BA4038967CE /* libPods-WindyDemo2Tests.a */,
+				BE278DDAC2B6A8F3E8CE0902 /* libPods-WindyDemo2UITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -222,6 +226,8 @@
 				1BB4499E0BC73F071C0803D1 /* Pods-WindyDemo2-WindyDemo2UITests.release.xcconfig */,
 				E66CF2751ABFEFEA5497226C /* Pods-WindyDemo2Tests.debug.xcconfig */,
 				14E8448ADEC9B3AD4E794737 /* Pods-WindyDemo2Tests.release.xcconfig */,
+				BDE722E988C2C76BDC9E91D2 /* Pods-WindyDemo2UITests.debug.xcconfig */,
+				345640BA1CF27AD80B28047D /* Pods-WindyDemo2UITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -273,6 +279,7 @@
 			children = (
 				E468CA0727BD7546009B7993 /* APIServiceTests.swift */,
 				E468CA0927BD76B1009B7993 /* WindyDegTests.swift */,
+				E468CA1327BE0763009B7993 /* UIViewControllerTests.swift */,
 				E468C8D227BCE432009B7993 /* Info.plist */,
 			);
 			path = WindyDemo2Tests;
@@ -705,7 +712,6 @@
 				E468C8D327BCE432009B7993 /* Sources */,
 				E468C8D427BCE432009B7993 /* Frameworks */,
 				E468C8D527BCE432009B7993 /* Resources */,
-				CF1D14AB1C4F4AF5949BE7F1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -836,23 +842,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CF1D14AB1C4F4AF5949BE7F1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WindyDemo2-WindyDemo2UITests/Pods-WindyDemo2-WindyDemo2UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WindyDemo2-WindyDemo2UITests/Pods-WindyDemo2-WindyDemo2UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WindyDemo2-WindyDemo2UITests/Pods-WindyDemo2-WindyDemo2UITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D7E26877C55D2CFCB43DB245 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -890,7 +879,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WindyDemo2-WindyDemo2UITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-WindyDemo2UITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -959,6 +948,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E468CA1427BE0763009B7993 /* UIViewControllerTests.swift in Sources */,
 				E468CA0827BD7546009B7993 /* APIServiceTests.swift in Sources */,
 				E468CA0A27BD76B1009B7993 /* WindyDegTests.swift in Sources */,
 			);
@@ -1213,7 +1203,7 @@
 		};
 		E468C8E727BCE432009B7993 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C66F7C615C90832D5DBAA1D8 /* Pods-WindyDemo2-WindyDemo2UITests.debug.xcconfig */;
+			baseConfigurationReference = BDE722E988C2C76BDC9E91D2 /* Pods-WindyDemo2UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1234,7 +1224,7 @@
 		};
 		E468C8E827BCE432009B7993 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BB4499E0BC73F071C0803D1 /* Pods-WindyDemo2-WindyDemo2UITests.release.xcconfig */;
+			baseConfigurationReference = 345640BA1CF27AD80B28047D /* Pods-WindyDemo2UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

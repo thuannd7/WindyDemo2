@@ -11,7 +11,7 @@ import UIKit
 extension UIViewController {
 
     class func initWithDefaultNib() -> Self {
-        let bundle = Bundle.main
+        let bundle = Bundle(for: self)
         let fileManege = FileManager.default
         let nibName = String(describing: self)
         
@@ -31,7 +31,8 @@ extension UIViewController {
     
     private class func initWithNibTemplate<T>() -> T {
         let nibName = String(describing: self)
-        let viewcontroller = self.init(nibName: nibName, bundle: Bundle.main)
+        let bunder = Bundle(for: self)
+        let viewcontroller = self.init(nibName: nibName, bundle: bunder)
         return viewcontroller as! T
     }
     
