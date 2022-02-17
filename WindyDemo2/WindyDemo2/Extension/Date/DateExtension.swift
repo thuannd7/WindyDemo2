@@ -19,7 +19,7 @@ extension Date {
     func toStringWithFormat(_ format: String)-> String {
         let formatter = DateFormatter()
         formatter.dateFormat = format
-        
+
         let locale = "en_us"
         formatter.locale = Locale(identifier: locale)
         return formatter.string(from: self).capitalized

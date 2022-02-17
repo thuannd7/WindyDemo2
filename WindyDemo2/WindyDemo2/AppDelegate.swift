@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DataManager.shared.fetchData()
         LocalizationStringHelper.setUpDefaultLanguage()
         let _window = UIWindow(frame: UIScreen.main.bounds)
-        let vc = WindyHomePageConfigure.viewController()
+        let vc = WindyHomePageConfigure.viewController(Date())
         _window.rootViewController = vc
         _window.backgroundColor = .white
         _window.makeKeyAndVisible()

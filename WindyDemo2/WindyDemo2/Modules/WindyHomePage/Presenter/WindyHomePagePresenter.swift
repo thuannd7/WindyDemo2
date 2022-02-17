@@ -12,6 +12,13 @@ class WindyHomePagePresenter: NSObject {
     var wireFrame: WindyHomePageWireFrameInput?
     var viewModel: WindyHomePageViewModel?
     internal let locationHelper = LocationHelper()
+    
+    deinit {
+        view = nil
+        interactor = nil
+        wireFrame = nil
+        viewModel = nil
+    }
 }
 
 // MARK:

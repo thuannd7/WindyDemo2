@@ -7,13 +7,17 @@ import UIKit
 
 class WindyHomePageViewModel: NSObject
 {
-    var lastTimeUpdate: Date = Date()
+    var lastTimeUpdate: Date! = Date()
     var listFavorite: [LocationModel] = []
     private var mapForecastWeatherData: [String: ForecastWeatherDataModel] = [:]
     private var currentLocationWeatherData: LocationWeatherDataModel?
     
     override init() {
         listFavorite = DataManager.shared.getListLocationFavorite()
+    }
+    
+    deinit {
+        lastTimeUpdate = nil
     }
 }
 
