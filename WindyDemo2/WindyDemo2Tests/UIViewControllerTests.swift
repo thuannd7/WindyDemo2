@@ -11,25 +11,15 @@ import SnapshotTesting
 
 class UIViewControllerTests: XCTestCase {
 
+    var homePageVC: UIViewController!
+    var selectLocationVC: UIViewController!
+    var detailVC: UIViewController!
+    
     override func setUpWithError() throws {
-
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testWindyHomePageView() throws {
-        let vc: UIViewController = WindyHomePageConfigure.viewController()
-        assertSnapshot(matching: vc, as: .image)
-    }
-    
-    func testSelectLocationViewController() throws {
-        let vc: UIViewController = SelectLocationViewController.initWithDefaultNib()
-        assertSnapshot(matching: vc, as: .image)
-    }
-    
-    func testLocationDetailViewController() throws {
+        try super.setUpWithError()
+        homePageVC = WindyHomePageConfigure.viewController()
+        selectLocationVC = SelectLocationViewController.initWithDefaultNib()
+        
         let lat = 21.0245 // of Ha Noi, Viet nam
         let long = 105.841171 // of Ha Noi, Viet Nam
         let data: ForecastWeatherDataModel = ForecastWeatherDataModel()
@@ -42,11 +32,29 @@ class UIViewControllerTests: XCTestCase {
         data.current.dew_point = 6
         data.current.temp = 300
         
-        let vc: UIViewController = LocationDetailConfigure.viewController(lat: lat,
-                                                                  long: long,
-                                                                  locationName: "Ha Noi",
-                                                                  isCurrentLocation: true,
-                                                                  dataDetail: data)
-        assertSnapshot(matching: vc, as: .image)
+        detailVC = LocationDetailConfigure.viewController(lat: lat,
+                                                          long: long,
+                                                          locationName: "Ha Noi",
+                                                          isCurrentLocation: true,
+                                                          dataDetail: data)
+    }
+
+    override func tearDownWithError() throws {
+        try super.tearDownWithError()
+        homePageVC = nil
+        selectLocationVC = nil
+        detailVC = nil
+    }
+
+    func testWindyHomePageView() throws {
+        assertSnapshot(matching: homePageVC, as: .image)
+    }
+    
+    func testSelectLocationViewController() throws {
+        assertSnapshot(matching: selectLocationVC, as: .image)
+    }
+    
+    func testLocationDetailViewController() throws {
+        assertSnapshot(matching: detailVC, as: .image)
     }
 }
