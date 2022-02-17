@@ -27,6 +27,10 @@ class HomeCurrenLocationTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        lblLocationName.text = "Current Location".localized
+        lblPermission.text = "Location service not enable".localized
+        btnOpenSetting.setTitle("Change setting".localized, for: .normal)
+        btnOpenSetting.setTitle("Change setting".localized, for: .highlighted)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,8 +39,6 @@ class HomeCurrenLocationTableViewCell: UITableViewCell {
     
     @IBAction func btnOpenSetingPressed(_ sender: Any) {
         if CLLocationManager.locationServicesEnabled() {
-            //app-settings:root=Privacy&path=LOCATION
-            //app-settings:root=LOCATION_SERVICES
             if let url = URL(string: "app-settings:root=LOCATION_SERVICES") {
                 UIApplication.shared.open(url)
             }
@@ -47,61 +49,62 @@ class HomeCurrenLocationTableViewCell: UITableViewCell {
         }
     }
     
-//    func billData(_ location: LocationWeatherDataModel?, _ _data: ForecastWeatherDataModel?, status: CLAuthorizationStatus) {
-//        if CLLocationManager.locationServicesEnabled() {
-//            switch status {
-//            case .notDetermined:
-//                viewPermission.isHidden = false
-//                lblPermission.text = "Confirm use Location serivce to continue"
-//                btnOpenSetting.isHidden = true
-//                break
-//            case .denied, .restricted:
-//                viewPermission.isHidden = false
-//                lblPermission.text = "You denied Location service"
-//                btnOpenSetting.isHidden = false
-//                break
-//            default:
-//                viewPermission.isHidden = true
-//                break
-//            }
-//        } else {
-//            lblPermission.text = "Location service not enable\nTo use, please access Settings -> Privacy -> Location Services"
-//            viewPermission.isHidden = false
-//            btnOpenSetting.isHidden = false
-//        }
-//        
-//        guard let data = _data else {
-//            lblLocationName.text = "Current Location"
-//            lblTemp.text = "-"
-//            lblWind.text = "Wind: -"
-//            lblHumidity.text = "Humidity: -"
-//            lblPressure.text = "Pressure: -"
-//            lblVisibility.text = "Visibility: -"
-//            lblDewPoint.text = "Dew point: -"
-//            lblWeatherDesc.text = ""
-//            imvWeather.image = nil
-//            lblUV.text = "UV index: -"
-//            return
-//        }
-//        
-//        imvWind.transform = CGAffineTransform(rotationAngle:  CGFloat(data.current.wind_deg*(Double.pi/180)))
-//        lblLocationName.text = location?.name.capitalized
-//        lblTemp.text = String(format: "%.0f°C", data.current.temp.tempK2C)
-//        lblWind.text = String(format: "Wind: %.1fm/s %@", data.current.wind_speed, data.current.wind_deg.windDegSymbol)
-//        lblHumidity.text = "Humidity: \(Int(data.current.humidity))%"
-//        
-//        lblPressure.text = "Pressure: \(Int(data.current.pressure))hPa"
-//        lblVisibility.text = String(format: "Visibility: %.1fkm", data.current.visibility/1000)
-//        lblDewPoint.text = String(format: "Dew point: %.0f°C", data.current.dew_point.tempK2C)
-//        lblUV.text = "UV index: \(data.current.uvi)"
-//        
-//        let weather = data.current.weather.first
-//        lblWeatherDesc.text = weather?.desc.capitalizingFirstLetter()
-//        
-//        if let icon = weather?.icon, !icon.isEmpty {
-//            imvWeather.image = UIImage(named: icon)
-//        } else {
-//            imvWeather.image = nil
-//        }
-//    }
+    func billData(_ location: LocationWeatherDataModel?, _ _data: ForecastWeatherDataModel?) {
+        if CLLocationManager.locationServicesEnabled() {
+            let status = LocationHelper.authorizationStatus
+            switch status {
+            case .notDetermined:
+                viewPermission.isHidden = false
+                lblPermission.text = "Confirm use Location serivce to continue".localized
+                btnOpenSetting.isHidden = true
+                break
+            case .denied, .restricted:
+                viewPermission.isHidden = false
+                lblPermission.text = "You denied Location service".localized
+                btnOpenSetting.isHidden = false
+                break
+            default:
+                viewPermission.isHidden = true
+                break
+            }
+        } else {
+            lblPermission.text = "Location service not enable\nTo use, please access Settings -> Privacy -> Location Services".localized
+            viewPermission.isHidden = false
+            btnOpenSetting.isHidden = false
+        }
+        
+        guard let data = _data else {
+            lblLocationName.text = "Current Location".localized
+            lblTemp.text = "-"
+            lblWind.text = "Wind".localized + ": -"
+            lblHumidity.text = "Humidity".localized + ": -"
+            lblPressure.text = "Pressure".localized + ": -"
+            lblVisibility.text = "Visibility".localized + ": -"
+            lblDewPoint.text = "Dew point".localized + ": -"
+            lblWeatherDesc.text = ""
+            imvWeather.image = nil
+            lblUV.text = "UV index".localized + ": -"
+            return
+        }
+        
+        imvWind.transform = CGAffineTransform(rotationAngle:  CGFloat(data.current.wind_deg*(Double.pi/180)))
+        lblLocationName.text = location?.name.capitalized ?? "Current Location".localized
+        lblTemp.text = String(format: "%.0f°C", data.current.temp.tempK2C)
+        lblWind.text = String(format: "%@: %.1fm/s %@", "Wind".localized,data.current.wind_speed, data.current.wind_deg.windDegSymbol)
+        lblHumidity.text = "Humidity".localized + ": \(Int(data.current.humidity))%"
+        
+        lblPressure.text = "Pressure".localized + ": \(Int(data.current.pressure))hPa"
+        lblVisibility.text = String(format: "%@: %.1fkm", "Visibility".localized ,data.current.visibility/1000)
+        lblDewPoint.text = String(format: "%@: %.0f°C", "Dew point".localized, data.current.dew_point.tempK2C)
+        lblUV.text = "UV index".localized + ": \(data.current.uvi)"
+        
+        let weather = data.current.weather.first
+        lblWeatherDesc.text = weather?.desc.capitalizingFirstLetter()
+        
+        if let icon = weather?.icon, !icon.isEmpty {
+            imvWeather.image = UIImage(named: icon)
+        } else {
+            imvWeather.image = nil
+        }
+    }
 }

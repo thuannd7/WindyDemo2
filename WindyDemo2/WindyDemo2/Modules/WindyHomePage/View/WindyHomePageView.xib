@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WindyHomePageView" customModule="WindyDemo2" customModuleProvider="target">
             <connections>
                 <outlet property="btnAdd" destination="6VE-Wy-8F1" id="Qm0-1L-i65"/>
+                <outlet property="lblTitle" destination="iRi-F6-y5s" id="6dt-e8-6C2"/>
                 <outlet property="lblUpdate" destination="hPI-Cv-dhW" id="HCy-JQ-5VG"/>
                 <outlet property="tbvMain" destination="app-ds-MSH" id="kbm-Tp-xDk"/>
                 <outlet property="view" destination="3XE-b6-vRi" id="Ygu-fE-FSE"/>
@@ -27,6 +28,10 @@
                     <rect key="frame" x="0.0" y="94" width="414" height="768"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="bIz-22-VWm"/>
+                        <outlet property="delegate" destination="-1" id="NHi-02-33W"/>
+                    </connections>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CpG-OZ-tlG">
                     <rect key="frame" x="0.0" y="44" width="414" height="50"/>
@@ -36,6 +41,9 @@
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Windy Demo"/>
+                            </userDefinedRuntimeAttributes>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updated: 00/00/0000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPI-Cv-dhW">
                             <rect key="frame" x="150" y="29" width="114.5" height="13.5"/>
@@ -86,7 +94,11 @@
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                             <real key="value" value="22"/>
                         </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Add location"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="btnAddPressed:" destination="-1" eventType="touchUpInside" id="cee-cT-Fxg"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Gzi-t3-xhA"/>

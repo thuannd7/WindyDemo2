@@ -1,9 +1,8 @@
 //
 //  TLocalizationStringHelper.swift
-//  Utils
+//  WindyDemo2
 //
-//  Created by Macintosh on 9/19/18.
-//  Copyright © 2018 Macintosh. All rights reserved.
+//  Created by Thuan Nguyen on 16/02/2022.
 //
 
 import Foundation
@@ -61,5 +60,7 @@ class LocalizationStringHelper: NSObject {
         localize.update(language: LanguageType.english.rawValue)
     }
     
-    class var login: String                    { return "_login".localize() }
+    class var remove: String                    { return "Remove".localize() }
+    class var cancel: String                    { return "Cancel".localize() }
+    class var doYouWantRemoveFavorite: String   { return "Do you want remove from favorite list?".localize() }
 }
