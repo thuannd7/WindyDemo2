@@ -5,12 +5,13 @@
 import UIKit
 
 class WindyHomePageConfigure: NSObject {
-    class func viewController() -> WindyHomePageView {
+    class func viewController(_ date: Date) -> WindyHomePageView {
         let view = WindyHomePageView.initWithDefaultNib()
         let presenter = WindyHomePagePresenter()
         let interactor = WindyHomePageInteractor()
         let wireFrame = WindyHomePageWireFrame()
         let viewModel = WindyHomePageViewModel()
+        viewModel.lastTimeUpdate = date
 
         presenter.viewModel = viewModel
         presenter.interactor = interactor

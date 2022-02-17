@@ -90,3 +90,4 @@ fastlane/test_output
 iOSInjectionProject/
 Pods/
 Podfile.lock
+WindyDemo2Tests/__Snapshots__
