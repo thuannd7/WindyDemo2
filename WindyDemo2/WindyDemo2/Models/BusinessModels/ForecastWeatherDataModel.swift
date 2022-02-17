@@ -9,8 +9,13 @@ import UIKit
 import SwiftyJSON
 
 class ForecastWeatherDataModel: NSObject {
-    var current: ForecaseInfor
+    var current: ForecaseInfor = ForecaseInfor()
     var hourly: [ForecaseInfor] = []
+    
+    override init() {
+        current = ForecaseInfor()
+        super.init()
+    }
     
     init(_ json: JSON) {
         current = ForecaseInfor(json["current"])

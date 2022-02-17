@@ -43,4 +43,8 @@ class ForecaseInfor: NSObject {
             weather.append(WeatherInfor(sub))
         }
     }
+    
+    override init() {
+        super.init()
+    }
 }

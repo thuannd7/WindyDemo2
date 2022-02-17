@@ -28,14 +28,15 @@ target 'WindyDemo2' do
            end
        end
   end
-       
-  target 'WindyDemo2Tests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+end
 
-  target 'WindyDemo2UITests' do
-    # Pods for testing
-  end
+target 'WindyDemo2Tests' do
+  inherit! :search_paths
+  # Pods for testing
+  pod 'SnapshotTesting', '~> 1.9.0'
+end
 
+target 'WindyDemo2UITests' do
+  # Pods for testing
+  pod 'SnapshotTesting', '~> 1.9.0'
 end

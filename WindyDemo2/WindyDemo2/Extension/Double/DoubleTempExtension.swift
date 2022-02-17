@@ -1,8 +1,8 @@
 //
 //  DoubleExtension.swift
-//  WeatherDemo
+//  WindyDemo2
 //
-//  Created by Thuan Nguyen on 24/01/2022.
+//  Created by Thuan Nguyen on 16/02/2022.
 //
 
 import UIKit
